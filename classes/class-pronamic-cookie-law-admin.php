@@ -11,7 +11,7 @@ class Pronamic_Cookie_Law_Admin
 	public function admin_menu()
 	{
 		add_submenu_page( 
-			'option-general.php', 
+			'options-general.php', 
 			__( 'Pronamic Cookie Law', 'pronamic_cookie_law' ), 
 			__( 'Pronamic Cookie Law', 'pronamic_cookie_law' ), 
 			'manage_options', 
