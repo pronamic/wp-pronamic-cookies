@@ -14,7 +14,7 @@ class Pronamic_Cookie_Law_Admin
 			'option-general.php', 
 			__( 'Pronamic Cookie Law', 'pronamic_cookie_law' ), 
 			__( 'Pronamic Cookie Law', 'pronamic_cookie_law' ), 
-			'edit_options', 
+			'manage_options', 
 			'pronamic_cookie_law', 
 			array( $this, 'display_options_page' )
 		);
@@ -22,7 +22,7 @@ class Pronamic_Cookie_Law_Admin
 
 	public function display_options_page()
 	{
-		Pronamic_Loader::view( 'views/admin/display_options_page' );
+		pronamic_cookie_law_view( 'views/admin/display_options_page' );
 	}
 
 	public function register_settings()
