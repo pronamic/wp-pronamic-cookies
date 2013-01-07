@@ -1,0 +1,7 @@
+.pronamic_cookie_law_position_top {top:0;}
+.pronamic_cookie_law_position_bottom {bottom:0;}
+#pronamic_cookie_law_holder {position:fixed;display:block;background:#000;width:100%;padding:5px;}
+	#pronamic_cookie_law_holder p {color:#fff;text-align:center;line-height:30px;}
+		.pronamic_cookie_law_close_button {margin-left:50px;background:#333;color:#fff;cursor:pointer;padding:5px;}
+			.pronamic_cookie_law_close_button:hover {color:#f1f1f1;}
+.admin-bar-showing  {padding-top:35px !important;}
