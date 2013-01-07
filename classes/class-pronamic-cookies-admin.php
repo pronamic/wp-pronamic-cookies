@@ -25,7 +25,7 @@ class Pronamic_Cookies_Admin {
 
 		add_settings_section(
 			'pronamic_cookie_options',
-			__( 'Pronamic Cookie Law Options', 'pronamic-cookies' ),
+			__( 'Pronamic Cookies Options', 'pronamic-cookies' ),
 			array( $this, 'settings_section' ),
 			'pronamic_cookie_options_page'
 		);
