@@ -31,7 +31,8 @@ class Pronamic_Cookies {
 		if (  ! $viewed ) {
 			pronamic_cookie_view( 'views/message', array(
 					'position' => get_option( 'pronamic_cookie_location' ),
-					'message' => get_option( 'pronamic_cookie_text ' )
+					'message' => get_option( 'pronamic_cookie_text ' ),
+					'link' => get_option( 'pronamic_cookie_link' )
 				) );
 		}
 	}

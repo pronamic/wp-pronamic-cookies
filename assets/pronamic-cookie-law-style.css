@@ -2,6 +2,7 @@
 .pronamic_cookie_position_bottom {bottom:0;}
 #pronamic_cookie_holder {position:fixed;display:block;background:#000;width:100%;padding:5px;left:0;right:0;}
 	#pronamic_cookie_holder p {color:#fff;text-align:center;line-height:30px;margin:0;padding:0;}
+		#pronamic_cookie_holder p a {color:#fff;}
 		.pronamic_cookie_close_button {background:#333;color:#fff;cursor:pointer;padding:5px;margin:0 0 0 50px;}
 			.pronamic_cookie_close_button:hover {color:#f1f1f1;}
 .admin-bar-showing  {padding-top:35px !important;}

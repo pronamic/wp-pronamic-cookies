@@ -60,8 +60,18 @@ class Pronamic_Cookies_Admin {
 			array( 'label_for' => 'pronamic_cookie_text' )
 		);
 
-		register_setting ( 'pronamic_cookie_options', 'pronamic_cookie_location' );
-		register_setting ( 'pronamic_cookie_options', 'pronamic_cookie_text' );
+		add_settings_field(
+			'pronamic_cookie_link',
+			__( 'Link', 'pronamic-cookies' ),
+			array( $this, 'text' ),
+			'pronamic_cookie_options_page',
+			'pronamic_cookie_options',
+			array( 'label_for' => 'pronamic_cookie_link' )
+		);
+
+		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_location' );
+		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_text' );
+		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_link' , array( $this, 'verifiy_url' ) );
 	}
 
 	public function settings_section() {}
@@ -103,6 +113,21 @@ class Pronamic_Cookies_Admin {
 			'regular-text code',
 			esc_attr( get_option( $args['label_for'] ) )
 		);
+	}
+
+	public function verifiy_url( $raw_url )
+	{
+		if( empty( $raw_url) || 'http://' == $raw_url )
+			return;
+
+		$url = parse_url( $url );
+
+		if( ! $url || ! isset( $url['scheme'] ) )
+		{
+			$raw_url = 'http://' . $raw_url;
+		}
+
+		return filter_var( $raw_url, FILTER_VALIDATE_URL );
 	}
 
 }
