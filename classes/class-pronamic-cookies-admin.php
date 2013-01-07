@@ -9,8 +9,8 @@ class Pronamic_Cookies_Admin {
 	public function admin_menu() {
 		add_submenu_page(
 			'options-general.php',
-			__( 'Pronamic Cookie Law', 'pronamic-cookies' ),
-			__( 'Pronamic Cookie Law', 'pronamic-cookies' ),
+			__( 'Pronamic Cookies', 'pronamic-cookies' ),
+			__( 'Pronamic Cookies', 'pronamic-cookies' ),
 			'manage_options',
 			'pronamic_cookie_options_page',
 			array( $this, 'display_options_page' )
