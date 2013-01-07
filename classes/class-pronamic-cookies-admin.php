@@ -37,14 +37,14 @@ class Pronamic_Cookies_Admin {
 			'pronamic_cookie_options_page',
 			'pronamic_cookie_options',
 			array(
-				'name' => 'pronamic_cookie_location',
+				'label_for' => 'pronamic_cookie_location',
 				'options' => array(
 					array(
-						'name' => __( 'Top', 'pronamic-cookies' ),
+						'label_for' => __( 'Top', 'pronamic-cookies' ),
 						'value' => 'top'
 					),
 					array(
-						'name' => __( 'Bottom', 'pronamic-cookies' ),
+						'label_for' => __( 'Bottom', 'pronamic-cookies' ),
 						'value' => 'bottom'
 					)
 				)
@@ -57,7 +57,7 @@ class Pronamic_Cookies_Admin {
 			array( $this, 'text' ),
 			'pronamic_cookie_options_page',
 			'pronamic_cookie_options',
-			array( 'name' => 'pronamic_cookie_text' )
+			array( 'label_for' => 'pronamic_cookie_text' )
 		);
 
 		register_setting ( 'pronamic_cookie_options', 'pronamic_cookie_location' );
@@ -69,24 +69,24 @@ class Pronamic_Cookies_Admin {
 	public function text( $args ) {
 		printf(
 			'<input name="%s" id="%s" type="text" value="%s" class="%s" />',
-			esc_attr( $args['name'] ),
-			esc_attr( $args['name'] ),
-			esc_attr( get_option( $args['name'] ) ),
+			esc_attr( $args['label_for'] ),
+			esc_attr( $args['label_for'] ),
+			esc_attr( get_option( $args['label_for'] ) ),
 			'regular-text code'
 		);
 	}
 
 	public function select( $args ) {
-		$chosen = get_option( $args['name'] );
+		$chosen = get_option( $args['label_for'] );
 
-		$html = "<select name='{$args['name']}'>";
+		$html = "<select name='{$args['label_for']}'>";
 
 		foreach ( $args['options'] as $option ) {
 			if ( $chosen == $option['value'] ) {
-				$html .= "<option value='{$option['value']}' selected='selected'>{$option['name']}</option>";
+				$html .= "<option value='{$option['value']}' selected='selected'>{$option['label_for']}</option>";
 			}
 			else {
-				$html .= "<option value='{$option['value']}'>{$option['name']}</option>";
+				$html .= "<option value='{$option['value']}'>{$option['label_for']}</option>";
 			}
 		}
 
@@ -98,10 +98,10 @@ class Pronamic_Cookies_Admin {
 	public function textarea( $args ) {
 		printf(
 			'<textarea name="%s" id="%s" class="%s">%s</textarea>',
-			esc_attr( $args['name'] ),
-			esc_attr( $args['name'] ),
+			esc_attr( $args['label_for'] ),
+			esc_attr( $args['label_for'] ),
 			'regular-text code',
-			esc_attr( get_option( $args['name'] ) )
+			esc_attr( get_option( $args['label_for'] ) )
 		);
 	}
 
