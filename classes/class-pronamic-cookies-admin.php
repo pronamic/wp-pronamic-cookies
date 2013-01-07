@@ -120,8 +120,8 @@ class Pronamic_Cookies_Admin {
 		if( empty( $raw_url) || 'http://' == $raw_url )
 			return;
 
-		$url = parse_url( $url );
-
+		$url = parse_url( $raw_url );
+		
 		if( ! $url || ! isset( $url['scheme'] ) )
 		{
 			$raw_url = 'http://' . $raw_url;
