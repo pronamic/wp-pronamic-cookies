@@ -58,7 +58,7 @@ function pronamic_cookie_view( $name, $vars = array(), $return = false ) {
  * ===========
  */
 
-$pronamic_cookie = new Pronamic_Cookies;
+$pronamic_cookie = new Pronamic_Cookies();
 
 if ( is_admin() )
-	$pronamic_cookie_admin = new Pronamic_Cookies_Admin;
+	$pronamic_cookie_admin = new Pronamic_Cookies_Admin();
