@@ -9,6 +9,7 @@
  */
 
 define( 'PRONAMIC_CL_BASE', dirname( __FILE__ ) );
+define( 'PRONAMIC_CL_PLUGIN_DIR', basename( PRONAMIC_CL_BASE ) );
 
 /**
  * Method to load classes for this plugin
@@ -58,7 +59,7 @@ function pronamic_cookie_view( $name, $vars = array(), $return = false ) {
  * ===========
  */
 
-$pronamic_cookie = new Pronamic_Cookies( __FILE__ );
+$pronamic_cookie = new Pronamic_Cookies();
 
 if ( is_admin() )
 	$pronamic_cookie_admin = new Pronamic_Cookies_Admin();
