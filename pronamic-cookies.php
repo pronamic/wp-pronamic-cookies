@@ -18,10 +18,10 @@ define( 'PRONAMIC_CL_BASE', dirname( __FILE__ ) );
 function pronamic_cookie_autoload( $class ) {
 	$class = strtolower( str_replace( '_' , '-', $class ) );
 
-	$classFile = PRONAMIC_CL_BASE .'/classes/class-'. $class . '.php';
+	$class_file = PRONAMIC_CL_BASE .'/classes/class-'. $class . '.php';
 
-	if ( file_exists( $classFile ) )
-		require_once $classFile;
+	if ( file_exists( $class_file ) )
+		require_once $class_file;
 }
 
 spl_autoload_register( 'pronamic_cookie_autoload' );

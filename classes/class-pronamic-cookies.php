@@ -26,14 +26,14 @@ class Pronamic_Cookies {
 	}
 
 	public function show_message() {
-		$viewed = ( isset( $_COOKIE['pcl_viewed'] )?: false );
+		$viewed = ( isset( $_COOKIE['pcl_viewed'] ) ? : false );
 
 		if (  ! $viewed ) {
 			pronamic_cookie_view( 'views/message', array(
 					'position' => get_option( 'pronamic_cookie_location' ),
-					'message' => get_option( 'pronamic_cookie_text ' ),
-					'link' => get_option( 'pronamic_cookie_link' )
-				) );
+					'message'  => get_option( 'pronamic_cookie_text ' ),
+					'link'     => get_option( 'pronamic_cookie_link' )
+			) );
 		}
 	}
 }

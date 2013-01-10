@@ -22,7 +22,6 @@ class Pronamic_Cookies_Admin {
 	}
 
 	public function register_settings() {
-
 		add_settings_section(
 			'pronamic_cookie_options',
 			__( 'Pronamic Cookies Options', 'pronamic-cookies' ),
@@ -38,14 +37,14 @@ class Pronamic_Cookies_Admin {
 			'pronamic_cookie_options',
 			array(
 				'label_for' => 'pronamic_cookie_location',
-				'options' => array(
+				'options'   => array(
 					array(
 						'label_for' => __( 'Top', 'pronamic-cookies' ),
-						'value' => 'top'
+						'value'     => 'top'
 					),
 					array(
 						'label_for' => __( 'Bottom', 'pronamic-cookies' ),
-						'value' => 'bottom'
+						'value'     => 'bottom'
 					)
 				)
 			)
@@ -71,7 +70,7 @@ class Pronamic_Cookies_Admin {
 
 		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_location' );
 		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_text' );
-		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_link' , array( $this, 'verifiy_url' ) );
+		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_link', array( $this, 'verifiy_url' ) );
 	}
 
 	public function settings_section() {}
@@ -122,12 +121,10 @@ class Pronamic_Cookies_Admin {
 
 		$url = parse_url( $raw_url );
 		
-		if( ! $url || ! isset( $url['scheme'] ) )
-		{
+		if( ! $url || ! isset( $url['scheme'] ) ) {
 			$raw_url = 'http://' . $raw_url;
 		}
 
 		return filter_var( $raw_url, FILTER_VALIDATE_URL );
 	}
-
 }
