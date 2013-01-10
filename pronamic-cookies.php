@@ -1,12 +1,22 @@
 <?php
+/*
+Plugin Name: Pronamic Cookies
+Plugin URI: http://pronamic.eu/wp-plugins/cookies/
+Description: Plugin to follow e-Privacy law.
+ 
+Version: 0.1
+Requires at least: 3.0
 
-/**
- * Plugin Name: Pronamic Cookies
- * Plugin URI: http://www.pronamic.nl
- * Author: Pronamic
- * Author URI: http://www.pronamic.nl
- * Description: Plugin to follow e-Privacy law.
- */
+Author: Pronamic
+Author URI: http://pronamic.eu/
+
+Text Domain: pronamic-cookies
+Domain Path: /lang/
+
+License: GPL
+
+GitHub URI: https://github.com/pronamic/wp-pronamic-cookies
+*/
 
 define( 'PRONAMIC_CL_BASE', dirname( __FILE__ ) );
 
