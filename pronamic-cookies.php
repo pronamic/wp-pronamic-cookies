@@ -5,7 +5,7 @@ Plugin URI: http://pronamic.eu/wp-plugins/cookies/
 Description: Plugin to follow e-Privacy law.
  
 Version: 0.1
-Requires at least: 3.0
+Requires at least: 3.2
 
 Author: Pronamic
 Author URI: http://pronamic.eu/
