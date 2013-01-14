@@ -4,7 +4,7 @@ Tags: law, eprivacy, cookie, footer, header
 Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-cookies&source=wp-plugin-readme-txt
 Requires at least: 3.2
 Tested up to: 3.5
-Stable Tag: 0.1
+Stable tag: 0.1
 
 == Description ==
 
