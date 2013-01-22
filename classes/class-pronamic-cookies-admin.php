@@ -4,6 +4,10 @@ class Pronamic_Cookies_Admin {
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
+
+		add_action( 'add_meta_boxes', array( $this, 'meta_boxes' ) );
+
+		add_action( 'save_post', array( $this, 'save_pronamic_cookie_block_meta_box' ) );
 	}
 
 	public function admin_menu() {
@@ -15,6 +19,70 @@ class Pronamic_Cookies_Admin {
 			'pronamic_cookie_options_page',
 			array( $this, 'display_options_page' )
 		);
+	}
+
+	public function meta_boxes()
+	{
+		add_meta_box(
+			'pronamic-cookie-block',
+			__( 'Cookie Block Details', 'pronamic-cookies' ),
+			array( $this, 'view_pronamic_cookie_block_meta_box' ),
+			'pronamic_cblock',
+			'normal',
+			'high'
+		);
+	}
+
+	public function view_pronamic_cookie_block_meta_box()
+	{
+		global $post;
+
+		// Get the meta information
+		$block_information = get_post_meta( get_the_ID(), 'pronamic_cblock_details', true );
+
+		// Check that some exist for this id (and is an array)
+		if ( ! $block_information || ! is_array( $block_information ) )
+			$block_information = array();
+
+		// Default values
+		$pronamic_cblock_blocked_content = '';
+
+		// Extra those values from the block information meta
+		extract( $block_information, EXTR_IF_EXISTS );
+
+		// Generate nonce
+		$nonce = wp_nonce_field( 'pronamic_cblock', 'pronamic_cblock_nonce', true, false );
+
+		pronamic_cookie_view( 'views/admin/view_pronamic_cookie_block_meta_box', array(
+			'block_content' => $pronamic_cblock_blocked_content,
+			'nonce' => $nonce
+		) );
+
+	}
+
+	public function save_pronamic_cookie_block_meta_box( $post_id )
+	{
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
+			return;
+
+		if ( ! current_user_can( 'edit_post', $post_id ) )
+			return;
+
+		if ( ! isset( $_POST['pronamic_cblock_nonce'] ) )
+			return;
+
+		if ( ! wp_verify_nonce( $_POST['pronamic_cblock_nonce'], 'pronamic_cblock' ) )
+			return;
+
+		$block_information = get_post_meta( get_the_ID(), 'pronamic_cblock_details', true );
+
+		if ( ! $block_information || ! is_array( $block_information ) )
+			$block_information = array();
+
+		$block_information['pronamic_cblock_blocked_content'] = $_POST['pronamic_cblock_blocked_content'];
+
+		update_post_meta( $post_id, 'pronamic_cblock_details', $block_information );
+
 	}
 
 	public function display_options_page() {

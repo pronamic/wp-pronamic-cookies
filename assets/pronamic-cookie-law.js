@@ -30,10 +30,45 @@ var Pronamic_Cookies = {
     blocks: {
         config: {},
         ready: function() {
-            
+            Pronamic_Cookies.blocks.config.dom = {
+                'show_button': jQuery('.pronamic_cblock_show_button'),
+                'holder': jQuery('.pronamic_cblock_holder')
+            };
+
+            Pronamic_Cookies.blocks.binds();
         },
         binds: function() {
+            Pronamic_Cookies.blocks.config.dom.show_button.click(
+                Pronamic_Cookies.blocks.set_and_get
+            );
+        },
+        set_and_get: function(e) {
+            e.preventDefault();
 
+            var self = jQuery(this);
+
+            Pronamic_Cookies.blocks.config.name = self.data('name');
+
+            Pronamic_Cookies.cookie.make({
+                'name': 'pcl_block_' + Pronamic_Cookies.blocks.config.name,
+                'value': 1
+            });
+
+            jQuery.ajax({
+                method:'POST',
+                url:Pronamic_Cookies.config.ajaxurl,
+                data:{
+                    action:'cblock',
+                    name:Pronamic_Cookies.blocks.config.name
+                },
+                dataType:'json',
+                success:Pronamic_Cookies.blocks._success
+            });
+        },
+        _success: function(data) {
+            if(data.resp) {
+                jQuery('.pcl_block_' + Pronamic_Cookies.blocks.config.name).empty().html(data.html);
+            }
         }
     },
     cookie: {
