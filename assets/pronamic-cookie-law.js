@@ -41,6 +41,7 @@ var Pronamic_Cookies = {
         config: {},
         ready: function() {
             Pronamic_Cookies.section.config.dom = {
+                'additional_buttons': jQuery('.jShowCookieLawModal'),
                 'show_button': jQuery('.pronamic_csection_show_button'),
                 'modal': jQuery('.pronamic_csection_modal'),
                 'accept_cookie': jQuery('.jAcceptCookie'),
@@ -51,6 +52,12 @@ var Pronamic_Cookies = {
             Pronamic_Cookies.section.center_show_button();
         },
         binds: function() {
+            Pronamic_Cookies.section.config.dom.additional_buttons.css('cursor', 'pointer');
+
+            Pronamic_Cookies.section.config.dom.additional_buttons.click(
+                Pronamic_Cookies.section.show_modal
+            );
+
             Pronamic_Cookies.section.config.dom.show_button.click(
                 Pronamic_Cookies.section.show_modal
             );

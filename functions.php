@@ -11,10 +11,18 @@ function unset_pronamic_cookies_section( $name ) {
     setcookie( 'pcl_section_' . $name, time()-3600 );
 }
 
-function pcl_button( $name, $description = null ) { ?>
-    <a href='#' class='pronamic_csection_show_button'><?php echo __( 'Accept cookie', 'pronamic-cookies' ); ?></a>
+function pcl_button( $name, $arguments = array() ) { 
+    $title = __( 'Cookie Law Notice', 'pronamic-cookes' );
+    $button = __( 'Accept cookie', 'pronamic-cookies' );
+    $description = get_option( 'pronamic_cookie_text' );
+
+    if ( is_array( $arguments ) && ! empty( $arguments ) )
+        extract( $arguments, EXTR_IF_EXISTS );
+
+    ?>
+    <a href='#' class='pronamic_csection_show_button jShowCookieLawModal'><?php echo $button; ?></a>
     <div class="pronamic_csection_modal">
-        <h2><?php echo ucfirst( $name ); ?></h2>
+        <h2><?php echo $title; ?></h2>
         <a href="#" class="jCloseModal pronamic_csection_modal_close">&times;</a>
         <?php if ( $description ) : ?>
         <div class="pronamic_csection_modal_content">
