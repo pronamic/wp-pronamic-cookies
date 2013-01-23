@@ -65,7 +65,9 @@ var Pronamic_Cookies = {
         },
         center_show_button: function() {
             var width = Pronamic_Cookies.section.config.dom.show_button.width();
-            Pronamic_Cookies.section.config.dom.show_button.css('margin-left', width/2);
+            Pronamic_Cookies.section.config.dom.show_button.css({
+                'marginRight': Math.abs(width/2) * -1
+            });
         },
         show_modal: function(e) {
             e.preventDefault();

@@ -8,7 +8,7 @@
 			#pronamic_cookie_holder .pronamic_cookie_close_button:hover {background:#5c5c5c;text-decoration:none;}
 .admin-bar-showing {padding-top:35px !important;}
 
-.pronamic_csection_show_button {padding:5px 10px;background:#fff;border:1px solid #000;text-align:center;position:absolute;top:50%;margin-top:-16px;left:50px;height:20px;line-height:20px;color:#000;text-decoration:none;}
+.pronamic_csection_show_button {padding:5px 10px;background:#fff;border:1px solid #000;text-align:center;position:absolute;top:50%;margin-top:-16px;right:50%;height:20px;line-height:20px;color:#000;text-decoration:none;}
     .pronamic_csection_show_button:hover {background:#000;color:#fff;}
 .pronamic_csection_modal {width:330px;background:#212121;border:1px solid #000;position:fixed;top:50%;left:50%;margin-left:-165px;display:none;}
     .pronamic_csection_modal h2 {background:#313131;font-size:20px;line-height:40px;color:#fff;text-align:center;}
