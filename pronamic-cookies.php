@@ -69,6 +69,8 @@ function pronamic_cookie_view( $name, $vars = array(), $return = false ) {
  * ===========
  */
 
+include( 'functions.php' );
+
 $pronamic_cookie = new Pronamic_Cookies();
 
 if ( is_admin() )
