@@ -78,6 +78,7 @@ var Pronamic_Cookies = {
         },
         show_modal: function(e) {
             e.preventDefault();
+            Pronamic_Cookies.section.config.dom.modal.hide();
             Pronamic_Cookies.section.config.dom.modal.show();
         },
         hide_modal: function(e) {

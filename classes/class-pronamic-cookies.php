@@ -38,4 +38,9 @@ class Pronamic_Cookies {
 			) );
 		}
 	}
+
+	public function full_block()
+	{
+		
+	}
 }

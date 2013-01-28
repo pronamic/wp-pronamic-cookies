@@ -4,6 +4,14 @@ class Pronamic_Cookies_Admin {
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
+
+		add_action( 'admin_enqueue_scripts', array( $this, 'scripts' ) );
+	}
+
+	public function scripts()
+	{
+		wp_register_script( 'pronamic_cookie_admin_js', plugins_url( PRONAMIC_CL_PLUGIN_DIR . '/assets/pronamic-cookie-law-admin.js' ), array( 'jquery' ) );
+		wp_enqueue_script( 'pronamic_cookie_admin_js' );
 	}
 
 	public function admin_menu() {
@@ -97,6 +105,55 @@ class Pronamic_Cookies_Admin {
 		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_link', array( $this, 'verifiy_url' ) );
 
 		// Blocker Settings
+		add_settings_section(
+			'pronamic_cookie_blocker_options',
+			__( 'Pronamic Cookie Blocker Options', 'pronamic-cookies' ),
+			array( $this, 'settings_section' ),
+			'pronamic_cookie_options_page'
+		);
+
+		add_settings_field(
+			'pronamic_cookie_blocker_active',
+			__( 'Active?', 'pronamic-cookies' ),
+			array( $this, 'select' ),
+			'pronamic_cookie_options_page',
+			'pronamic_cookie_blocker_options',
+			array(
+				'label_for' => 'pronamic_cookie_blocker_active',
+				'options' => array(
+					array(
+						'label_for' => __( 'Yes' ),
+						'value' => 1
+					),
+					array(
+						'label_for' => __( 'No' ),
+						'value' => 0
+					)
+				)
+			)
+		);
+
+		add_settings_field(
+			'pronamic_cookie_blocker_text',
+			__( 'Text', 'pronamic-cookies' ),
+			array( $this, 'editor' ),
+			'pronamic_cookie_options_page',
+			'pronamic_cookie_blocker_options',
+			array( 'label_for' => 'pronamic_cookie_blocker_text' )
+		);
+
+		add_settings_field(
+			'pronamic_cookie_blocker_image',
+			__( 'Background Image', 'pronamic-cookies' ),
+			array( $this, 'uploader' ),
+			'pronamic_cookie_options_page',
+			'pronamic_cookie_blocker_options',
+			array( 'label_for' => 'pronamic_cookie_blocker_image' )
+		);
+
+		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_blocker_active' );
+		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_blocker_text' );
+		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_blocker_image' );
 
 	}
 
@@ -144,6 +201,26 @@ class Pronamic_Cookies_Admin {
 	public function editor( $args )
 	{
 		wp_editor( get_option( $args['label_for'] ), $args['label_for'] );
+	}
+
+	public function uploader( $args )
+	{
+		wp_enqueue_media();
+
+		$string = 	'<div class="uploader">' .
+						'<input type="text" name="%s" id="%s" value="%s"/>' .
+						'<input type="button" class="button button-secondary jMediaUploader" name="%s_button" id="%s_button" value="%s" />' .
+					'</div>';
+
+		printf(
+			$string,
+			esc_attr( $args['label_for'] ),
+			esc_attr( $args['label_for'] ),
+			get_option( $args['label_for'] ),
+			esc_attr( $args['label_for'] ),
+			esc_attr( $args['label_for'] ),
+			__( 'Upload' )
+		);
 	}
 
 	public function verifiy_url( $raw_url )
