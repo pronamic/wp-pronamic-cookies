@@ -22,11 +22,34 @@ class Pronamic_Cookies_Admin {
 	}
 
 	public function register_settings() {
+
+		// Base Settings
 		add_settings_section(
 			'pronamic_cookie_options',
 			__( 'Pronamic Cookies Options', 'pronamic-cookies' ),
 			array( $this, 'settings_section' ),
 			'pronamic_cookie_options_page'
+		);
+
+		add_settings_field(
+			'pronamic_cookie_base_active',
+			__( 'Active?', 'pronamic-cookies' ),
+			array( $this, 'select' ),
+			'pronamic_cookie_options_page',
+			'pronamic_cookie_options',
+			array(
+				'label_for' => 'pronamic_cookie_base_active',
+				'options' => array(
+					array(
+						'label_for' => __( 'Yes' ),
+						'value' => 1
+					),
+					array(
+						'label_for' => __( 'No' ),
+						'value' => 0
+					)
+				)
+			)
 		);
 
 		add_settings_field(
@@ -68,9 +91,13 @@ class Pronamic_Cookies_Admin {
 			array( 'label_for' => 'pronamic_cookie_link' )
 		);
 
+		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_base_active' );
 		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_location' );
 		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_text' );
 		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_link', array( $this, 'verifiy_url' ) );
+
+		// Blocker Settings
+
 	}
 
 	public function settings_section() {}
