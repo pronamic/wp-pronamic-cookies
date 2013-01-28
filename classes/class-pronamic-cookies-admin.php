@@ -141,6 +141,11 @@ class Pronamic_Cookies_Admin {
 		);
 	}
 
+	public function editor( $args )
+	{
+		wp_editor( get_option( $args['label_for'] ), $args['label_for'] );
+	}
+
 	public function verifiy_url( $raw_url )
 	{
 		if( empty( $raw_url) || 'http://' == $raw_url )
