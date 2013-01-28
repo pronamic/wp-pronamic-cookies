@@ -100,6 +100,28 @@ var Pronamic_Cookies = {
             document.location.reload(true);
         }
     },
+    blocker: {
+        config: {},
+        ready: function() {
+            Pronamic_Cookies.blocker.config.dom = {
+                'button': jQuery('.jBlockerAccept')
+            };
+
+            Pronamic_Cookies.blocker.binds();
+        },
+        binds: function() {
+            Pronamic_Cookies.blocker.config.dom.button.click(Pronamic_Cookies.blocker.set_and_go);
+        },
+        set_and_go: function(e) {
+            e.preventDefault();
+
+            Pronamic_Cookies.cookie.make({
+                'name': 'pcl_viewed',
+                'value': 1
+            });
+            document.location.reload(true);
+        }
+    },
     cookie: {
         make: function( args ) {
             document.cookie = escape( args.name ) + '=' + escape( args.value ) + "; path=/";

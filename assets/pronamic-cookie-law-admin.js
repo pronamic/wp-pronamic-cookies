@@ -2,6 +2,7 @@ var Pronamic_Cookies_Admin = {
     config: {},
     ready: function() {
         Pronamic_Cookies_Admin.uploader.ready();
+        Pronamic_Cookies_Admin.color_picker.ready();
     },
     uploader: {
         config: {},
@@ -27,6 +28,19 @@ var Pronamic_Cookies_Admin = {
             }
 
             wp.media.editor.open(self);
+        }
+    },
+    color_picker: {
+        config: {},
+        ready: function() {
+            Pronamic_Cookies_Admin.color_picker.config.dom = {
+                element: jQuery('.jColorPicker')
+            };
+
+            Pronamic_Cookies_Admin.color_picker.binds();
+        },
+        binds: function() {
+            Pronamic_Cookies_Admin.color_picker.config.dom.element.wpColorPicker();
         }
     }
 };
