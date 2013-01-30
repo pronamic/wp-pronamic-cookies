@@ -45,7 +45,8 @@ var Pronamic_Cookies = {
                 'show_button': jQuery('.pronamic_csection_show_button'),
                 'modal': jQuery('.pronamic_csection_modal'),
                 'accept_cookie': jQuery('.jAcceptCookie'),
-                'close_modal': jQuery('.jCloseModal')
+                'close_modal': jQuery('.jCloseModal'),
+                'overlay': jQuery('<div></div>')
             };
 
             Pronamic_Cookies.section.binds();
@@ -80,11 +81,20 @@ var Pronamic_Cookies = {
             e.preventDefault();
             Pronamic_Cookies.section.config.dom.modal.hide();
             Pronamic_Cookies.section.config.dom.modal.show();
+            Pronamic_Cookies.section.show_overlay();
         },
         hide_modal: function(e) {
             if( undefined != e)
                 e.preventDefault();
             Pronamic_Cookies.section.config.dom.modal.hide();
+            Pronamic_Cookies.section.hide_overlay();
+        },
+        show_overlay: function() {
+            var overlay = jQuery('<div></div>').addClass('pcl-overlay');
+            jQuery('body').append(overlay);
+        },
+        hide_overlay: function() {
+            jQuery('.pcl-overlay').remove();
         },
         accepted: function(e) {
             e.preventDefault();
