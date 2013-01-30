@@ -20,6 +20,6 @@
 
 .pronamic_csection_modal_footer { *zoom: 1; background:#fff;}
 .pronamic_csection_modal_footer:after { clear: both; content: ""; display: table; }
-        .pronamic_csection_button {color:#000;display:block;width:128px;background:#fff;text-decoration:none;padding:5px 10px;text-align:center;font-size:12px;margin-bottom:10px;margin-left:10px;margin-top:10px;float:left;border:1px solid #ccc;}
+        .pronamic_csection_button {color:#000;display:inline-block;background:#fff;text-decoration:none;padding:5px 10px;text-align:center;font-size:12px;margin-bottom:10px;margin-left:10px;margin-top:10px;float:left;border:1px solid #ccc;}
 
 .pcl-overlay {background:#000;opacity:0.7;position:fixed;height:100%;width:100%;z-index:998;top:0;left:0;}
