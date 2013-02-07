@@ -7,6 +7,12 @@
  * @see http://core.trac.wordpress.org/browser/tags/3.5.1/wp-includes/deprecated.php
  */
 
+function is_pronamic_cookies_section_accepted( $name ) {
+	_deprecated_function( __FUNCTION__, '0.2', 'pronamic_cookies_is_section_accepted()' );
+	
+	return pronamic_cookies_is_section_accepted( $name );
+}
+
 function pcl_button( $name, $arguments = array() ) {
 	_deprecated_function( __FUNCTION__, '0.2', 'pronamic_cookies_button()' );
 	
