@@ -11,7 +11,7 @@ function unset_pronamic_cookies_section( $name ) {
     setcookie( 'pcl_section_' . $name, time() - 3600 );
 }
 
-function pcl_button( $name, $arguments = array() ) { 
+function pronamic_cookies_button( $name, $arguments = array() ) { 
     $title       = __( 'Cookie Law Notice', 'pronamic-cookes' );
     $button      = __( 'Accept cookie', 'pronamic-cookies' );
     $description = get_option( 'pronamic_cookie_text' );
@@ -43,7 +43,7 @@ function pcl_button( $name, $arguments = array() ) {
 	<?php 
 }
 
-function pcl_modal( $name, $arguments = array() ) { 
+function pronamic_cookies_modal( $name, $arguments = array() ) { 
     $title       = __( 'Cookie Law Notice', 'pronamic-cookes' );
     $description = get_option( 'pronamic_cookie_text' );
 
