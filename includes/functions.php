@@ -1,10 +1,7 @@
 <?php
 
 function pronamic_cookies_is_section_accepted( $name ) {
-    if ( isset( $_COOKIE['pcl_section_' . $name] ) )
-        return true;
-    else
-        return false;
+    return isset( $_COOKIE['pcl_section_' . $name] );
 }
 
 function unset_pronamic_cookies_section( $name ) {
