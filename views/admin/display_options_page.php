@@ -1,9 +1,7 @@
 <div class="wrap">
 	<?php screen_icon(); ?>
 
-	<h2>
-		<?php echo __( 'Pronamic Cookies', 'pronamic_cookie' ); ?>
-	</h2>
+	<h2><?php echo get_admin_page_title(); ?></h2>
 
 	<form action="options.php" method="post">
 		<?php settings_fields( 'pronamic_cookie_options' ); ?>
