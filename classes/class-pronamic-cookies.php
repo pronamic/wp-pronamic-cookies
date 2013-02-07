@@ -50,39 +50,28 @@ class Pronamic_Cookies {
 		}
 	}
 
-	public function blocker()
-	{
+	public function blocker() {
 		$blocker_active = get_option( 'pronamic_cookie_blocker_active' );
 
-		if ( $blocker_active == 1 && ! $this->is_a_spider() && ! isset( $_COOKIE['pcl_viewed'] ) )
-		{
+		if ( $blocker_active == 1 && ! $this->is_a_spider() && ! isset( $_COOKIE['pcl_viewed'] ) ) {
 			// intercept!
 			pronamic_cookie_view( 'views/blocker', array(
-				'javascript_url' => plugins_url( PRONAMIC_CL_PLUGIN_DIR . '/assets/pronamic-cookie-law.js' ),
-				'title' => get_option( 'pronamic_cookie_blocker_title' ),
-				'text' => get_option( 'pronamic_cookie_blocker_text' ),
-				'image' => get_option( 'pronamic_cookie_blocker_image' ),
-				'color' => get_option( 'pronamic_cookie_blocker_bgcolor' ),
+				'javascript_url'       => plugins_url( 'assets/pronamic-cookie-law.js', PRONAMIC_CL_PLUGIN_DIR ),
+				'title'                => get_option( 'pronamic_cookie_blocker_title' ),
+				'text'                 => get_option( 'pronamic_cookie_blocker_text' ),
+				'image'                => get_option( 'pronamic_cookie_blocker_image' ),
+				'color'                => get_option( 'pronamic_cookie_blocker_bgcolor' ),
 				'cookie_law_link_show' => get_option( 'pronamic_cookie_blocker_show_link' ),
-				'cookie_law_link' => get_option( 'pronamic_cookie_link' ),
-				'accept_button_text' => __( 'Accept', 'pronamic-cookies' ),
-				'law_link_text' => __( 'Read more about the cookies on this site here', 'pronamic-cookies' ),
+				'cookie_law_link'      => get_option( 'pronamic_cookie_link' ),
+				'accept_button_text'   => __( 'Accept', 'pronamic-cookies' ),
+				'law_link_text'        => __( 'Read more about the cookies on this site here', 'pronamic-cookies' ),
 			) );
 
 			exit;
-
 		}
 	}
 
-	public function is_a_spider()
-	{
-		if ( array_search( $_SERVER['HTTP_USER_AGENT'], $this->spiders ) === false )
-		{
-			return false;
-		}
-		else
-		{
-			return true;
-		}
+	public function is_a_spider() {
+		return array_search( $_SERVER['HTTP_USER_AGENT'], $this->spiders ) !== false;
 	}
 }
