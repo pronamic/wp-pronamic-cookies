@@ -38,5 +38,8 @@ $arguments allow an array of the following keys:
 
 == Changelog ==
 
-= 1.0.0 =
+= 0.2 =
+*	?
+
+= 0.1 =
 *	Initial release
