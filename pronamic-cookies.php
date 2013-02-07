@@ -69,7 +69,8 @@ function pronamic_cookie_view( $name, $vars = array(), $return = false ) {
  * ===========
  */
 
-include( 'functions.php' );
+include 'includes/functions.php';
+include 'includes/deprecated.php';
 
 $pronamic_cookie = new Pronamic_Cookies();
 
