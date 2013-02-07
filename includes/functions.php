@@ -1,9 +1,21 @@
 <?php
 
+/**
+ * Check if the cookies for the specified section are accepted
+ * 
+ * @param string $name
+ * @return boolean true if accepted, false otherwise
+ */
 function pronamic_cookies_is_section_accepted( $name ) {
     return isset( $_COOKIE['pcl_section_' . $name] );
 }
 
+/**
+ * Render an accept cookies button for an specific section
+ * 
+ * @param string $name the name of an section
+ * @param array $arguments
+ */
 function pronamic_cookies_button( $name, $arguments = array() ) { 
     $title       = __( 'Cookie Law Notice', 'pronamic-cookes' );
     $button      = __( 'Accept cookie', 'pronamic-cookies' );
@@ -36,6 +48,12 @@ function pronamic_cookies_button( $name, $arguments = array() ) {
 	<?php 
 }
 
+/**
+ * Render an cookies modal
+ * 
+ * @param string $name the name of an section
+ * @param array $arguments
+ */
 function pronamic_cookies_modal( $name, $arguments = array() ) { 
     $title       = __( 'Cookie Law Notice', 'pronamic-cookes' );
     $description = get_option( 'pronamic_cookie_text' );
