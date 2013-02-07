@@ -2,7 +2,7 @@
 	<?php screen_icon(); ?>
 
 	<h2>
-		<?php echo __( 'Pronamic Cookie Law Options', 'pronamic_cookie' ); ?>
+		<?php echo __( 'Pronamic Cookies', 'pronamic_cookie' ); ?>
 	</h2>
 
 	<form action="options.php" method="post">
