@@ -4,7 +4,7 @@ Plugin Name: Pronamic Cookies
 Plugin URI: http://pronamic.eu/wp-plugins/cookies/
 Description: Plugin to follow e-Privacy law.
  
-Version: 0.1
+Version: 0.2
 Requires at least: 3.2
 
 Author: Pronamic
@@ -45,7 +45,6 @@ spl_autoload_register( 'pronamic_cookie_autoload' );
  * @param unknown $return | bool | Wether to show to browser or return the view as a string.
  */
 function pronamic_cookie_view( $name, $vars = array(), $return = false ) {
-
 	extract( $vars );
 
 	ob_start();
