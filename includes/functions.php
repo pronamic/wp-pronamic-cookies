@@ -4,10 +4,6 @@ function pronamic_cookies_is_section_accepted( $name ) {
     return isset( $_COOKIE['pcl_section_' . $name] );
 }
 
-function unset_pronamic_cookies_section( $name ) {
-    setcookie( 'pcl_section_' . $name, time() - 3600 );
-}
-
 function pronamic_cookies_button( $name, $arguments = array() ) { 
     $title       = __( 'Cookie Law Notice', 'pronamic-cookes' );
     $button      = __( 'Accept cookie', 'pronamic-cookies' );
