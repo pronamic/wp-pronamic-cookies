@@ -32,7 +32,7 @@ class Pronamic_Cookies_Admin {
 		// Base Settings
 		add_settings_section(
 			'pronamic_cookie_options',
-			__( 'Pronamic Cookies Options', 'pronamic-cookies' ),
+			__( 'Bar', 'pronamic-cookies' ),
 			array( $this, 'settings_section' ),
 			'pronamic_cookie_options_page'
 		);
@@ -105,7 +105,7 @@ class Pronamic_Cookies_Admin {
 		// Blocker Settings
 		add_settings_section(
 			'pronamic_cookie_blocker_options',
-			__( 'Pronamic Cookie Blocker Options', 'pronamic-cookies' ),
+			__( 'Wall', 'pronamic-cookies' ),
 			array( $this, 'settings_section' ),
 			'pronamic_cookie_options_page'
 		);
