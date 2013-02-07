@@ -121,11 +121,11 @@ class Pronamic_Cookies_Admin {
 				'options' => array(
 					array(
 						'label_for' => __( 'Yes', 'pronamic-cookies' ),
-						'value' => 1
+						'value'     => 1
 					),
 					array(
 						'label_for' => __( 'No', 'pronamic-cookies' ),
-						'value' => 0
+						'value'     => 0
 					)
 				)
 			)
