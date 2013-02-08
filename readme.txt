@@ -23,7 +23,7 @@ The Cookie Bar is a simple bar along the top or bottom of the page that gives no
 The Cookie Wall is a full site lockout until cookies have been accepted.  It is run before anything that can set any javascript or cookies.  A background image, color and text are modifiable
 from the settings.
 
-__Note: The Cookie Bar and Cookie Wall share the same cookie as they aim to solve the same problem, just in different ways.  Choose one of the two__
+Note: The Cookie Bar and Cookie Wall share the same cookie as they aim to solve the same problem, just in different ways.  Choose one of the two
 
 === Sections ===
 
@@ -46,8 +46,6 @@ $arguments allow an array of the following keys:
 
 A new dynamic component is available that will ensure that sections are correctly shown even with any caching in place.
 
-```php
-
 $arguments = array(
 	'title' => __( 'Title on the message modal' ),
 	'description' => __( 'Will overide the description text from the options' ),
@@ -55,8 +53,6 @@ $arguments = array(
 );
 
 pronamic_cookies_dynamic( $name );
-
-```
 
 You no longer require an if statement ( or the usage of pronamic_cookies_is_section_accepted() ).
 
