@@ -46,15 +46,45 @@ $arguments allow an array of the following keys:
 
 A new dynamic component is available that will ensure that sections are correctly shown even with any caching in place.
 
+$name = 'pronamic_cookies_dynamic';
+
+Name is the unique naming given to this dynamic section.  Its name is important for determining the content you want
+to show once accepted.
+
+$container = 'pronamic_cookies_dynamic_container';
+
+This is the name of the surrounding div ( CSS CLASS NAME )
+
 $arguments = array(
 	'title' => __( 'Title on the message modal' ),
 	'description' => __( 'Will overide the description text from the options' ),
 	'button' => __( 'The text on the button' )
 );
 
-pronamic_cookies_dynamic( $name );
+pronamic_cookies_dynamic( $name, $container, $arguments );
 
-You no longer require an if statement ( or the usage of pronamic_cookies_is_section_accepted() ).
+You don't require an if statement with dynamic ( or the usage of pronamic_cookies_is_section_accepted() ).
+
+==== Example: ====
+
+<div class='pronamic_cookies_dynamic_container'>
+	<a href="#" class="jShowCookieLawModal">Click</a>
+</div>
+<?php
+
+pronamic_cookies_dynamic( 'dynamic_section', 'pronamic_cookies_dynamic_container', array(
+	'title' => __( 'Cookies are required for this section' )
+) );
+
+?>
+
+==== JavaScript ====
+
+You can call the modal of pronamic_cookies_dynamic and pronamic_cookies_section from anything (imgs, buttons, links) just give that element the class
+'jShowCookieLawModal'
+
+
+
 
 
 == Installation ==
