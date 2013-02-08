@@ -132,7 +132,69 @@ var Pronamic_Cookies = {
             document.location.reload(true);
         }
     },
+    dynamic: {
+        config: {},
+        ready: function() {
+            Pronamic_Cookies.dynamic.config.dom = {
+                'button': jQuery('.jAcceptCookieDynamic'),
+                'verified_content': jQuery('.jPCLDynamicContent')
+            };
+
+            Pronamic_Cookies.dynamic.binds();
+            Pronamic_Cookies.dynamic.dynamic_run();
+        },
+        check_it: function( name ) {
+            
+            if(Pronamic_Cookies.cookie.all[name]){ return Pronamic_Cookies.cookie.all[name]; }
+
+            c = document.cookie.split('; ');
+            Pronamic_Cookies.cookie.all = {};
+
+            for(i=c.length-1; i>=0; i--){
+               C = c[i].split('=');
+               Pronamic_Cookies.cookie.all[C[0]] = C[1];
+            }
+
+            if(Pronamic_Cookies.cookie.all[name] != undefined ) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        binds: function() {
+            Pronamic_Cookies.dynamic.config.dom.button.click(Pronamic_Cookies.dynamic.set_and_replace);
+        },
+        set_and_replace: function(e) {
+            e.preventDefault();
+
+            var container = jQuery(this).data('container'),
+                name = jQuery(this).data('name');
+
+            Pronamic_Cookies.dynamic.fill_it( container );
+
+            Pronamic_Cookies.cookie.make({
+                'name': 'pcl_section_' + name,
+                'value': 1
+            });
+
+            Pronamic_Cookies.section.hide_modal();
+        },
+
+        fill_it: function( container ) {
+            jQuery('.' + container).empty().html(Pronamic_Cookies.dynamic.config.dom.verified_content);
+        },
+        dynamic_run: function() {
+            jQuery.each(Pronamic_Cookies.dynamic.config.dom.verified_content, function() {
+                var container = jQuery(this).data('container'),
+                    name = jQuery(this).data('name');
+
+                if(Pronamic_Cookies.dynamic.check_it('pcl_section_' + name))
+                    Pronamic_Cookies.dynamic.fill_it(container)
+            });
+        }
+    },
     cookie: {
+        all:{},
         make: function( args ) {
             document.cookie = escape( args.name ) + '=' + escape( args.value ) + "; path=/";
         }
