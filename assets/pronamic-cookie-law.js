@@ -31,7 +31,7 @@ var Pronamic_Cookies = {
     blocks: {
         config: {},
         ready: function() {
-            
+
         },
         binds: function() {
 
@@ -144,7 +144,7 @@ var Pronamic_Cookies = {
             Pronamic_Cookies.dynamic.dynamic_run();
         },
         check_it: function( name ) {
-            
+
             if(Pronamic_Cookies.cookie.all[name]){ return Pronamic_Cookies.cookie.all[name]; }
 
             c = document.cookie.split('; ');
@@ -181,7 +181,7 @@ var Pronamic_Cookies = {
         },
 
         fill_it: function( container ) {
-            jQuery('.' + container).empty().html(Pronamic_Cookies.dynamic.config.dom.verified_content);
+            jQuery('.' + container).empty().html(Pronamic_Cookies.dynamic.config.dom.verified_content.val());
         },
         dynamic_run: function() {
             jQuery.each(Pronamic_Cookies.dynamic.config.dom.verified_content, function() {
