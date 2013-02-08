@@ -56,7 +56,7 @@ class Pronamic_Cookies {
 		if ( $blocker_active == 1 && ! $this->is_a_spider() && ! isset( $_COOKIE['pcl_viewed'] ) ) {
 			// intercept!
 			pronamic_cookie_view( 'views/blocker', array(
-				'javascript_url'       => plugins_url( 'assets/pronamic-cookie-law.js', PRONAMIC_CL_PLUGIN_DIR ),
+				'javascript_url'       => plugins_url( 'assets/pronamic-cookie-law.js', PRONAMIC_CL_FILE ),
 				'title'                => get_option( 'pronamic_cookie_blocker_title' ),
 				'text'                 => get_option( 'pronamic_cookie_blocker_text' ),
 				'image'                => get_option( 'pronamic_cookie_blocker_image' ),
