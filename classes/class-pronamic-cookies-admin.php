@@ -9,7 +9,7 @@ class Pronamic_Cookies_Admin {
 	}
 
 	public function scripts() {
-		wp_register_script( 'pronamic_cookie_admin_js', plugins_url( 'assets/pronamic-cookie-law-admin.js', PRONAMIC_CL_PLUGIN_DIR ), array( 'jquery', 'wp-color-picker' ) );
+		wp_register_script( 'pronamic_cookie_admin_js', plugins_url( 'assets/pronamic-cookie-law-admin.js', PRONAMIC_CL_FILE ), array( 'jquery', 'wp-color-picker' ) );
 		wp_enqueue_script( 'pronamic_cookie_admin_js' );
 	}
 
@@ -276,7 +276,7 @@ class Pronamic_Cookies_Admin {
 			return;
 
 		$url = parse_url( $raw_url );
-		
+
 		if ( ! $url || ! isset( $url['scheme'] ) ) {
 			$raw_url = 'http://' . $raw_url;
 		}

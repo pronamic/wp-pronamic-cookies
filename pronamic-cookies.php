@@ -3,7 +3,7 @@
 Plugin Name: Pronamic Cookies
 Plugin URI: http://pronamic.eu/wp-plugins/cookies/
 Description: Plugin to follow e-Privacy law.
- 
+
 Version: 0.2
 Requires at least: 3.2
 
@@ -18,8 +18,10 @@ License: GPL
 GitHub URI: https://github.com/pronamic/wp-pronamic-cookies
 */
 
-define( 'PRONAMIC_CL_BASE', dirname( __FILE__ ) );
+define( 'PRONAMIC_CL_FILE', __FILE__ );
+define( 'PRONAMIC_CL_BASE', dirname( PRONAMIC_CL_FILE ) );
 define( 'PRONAMIC_CL_PLUGIN_DIR', basename( PRONAMIC_CL_BASE ) );
+
 
 /**
  * Method to load classes for this plugin
