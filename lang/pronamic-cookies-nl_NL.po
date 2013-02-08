@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic Events\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-30 14:12+0100\n"
-"PO-Revision-Date: 2013-01-30 14:13+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2013-02-07 15:25+0100\n"
+"PO-Revision-Date: 2013-02-07 15:25+0100\n"
+"Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: functions.php:15 functions.php:46
 msgid "Cookie Law Notice"
-msgstr ""
+msgstr "Cookie wet bericht"
 
 #: functions.php:16 functions.php:39 functions.php:68
 msgid "Accept cookie"
@@ -30,98 +30,99 @@ msgstr "Cookies accepteren"
 msgid "Decline cookie"
 msgstr "Niet accepteren"
 
+#: classes/class-pronamic-cookies-admin.php:19
 #: classes/class-pronamic-cookies-admin.php:20
-#: classes/class-pronamic-cookies-admin.php:21
-#, fuzzy
 msgid "Pronamic Cookies"
-msgstr "Pronamic Cookie Law"
+msgstr "Pronamic Cookies"
 
-#: classes/class-pronamic-cookies-admin.php:37
-#, fuzzy
-msgid "Pronamic Cookies Options"
-msgstr "Pronamic Cookie Law opties"
+#: classes/class-pronamic-cookies-admin.php:35
+msgid "Bar"
+msgstr "Balk"
 
-#: classes/class-pronamic-cookies-admin.php:44
-#: classes/class-pronamic-cookies-admin.php:117
-#, fuzzy
+#: classes/class-pronamic-cookies-admin.php:42
+#: classes/class-pronamic-cookies-admin.php:115
 msgid "Active?"
-msgstr "Actief"
+msgstr "Actief?"
 
-#: classes/class-pronamic-cookies-admin.php:52
-#: classes/class-pronamic-cookies-admin.php:125
-#: classes/class-pronamic-cookies-admin.php:164
+#: classes/class-pronamic-cookies-admin.php:50
+#: classes/class-pronamic-cookies-admin.php:123
+#: classes/class-pronamic-cookies-admin.php:162
 msgid "Yes"
 msgstr "Ja"
 
-#: classes/class-pronamic-cookies-admin.php:56
-#: classes/class-pronamic-cookies-admin.php:129
-#: classes/class-pronamic-cookies-admin.php:168
+#: classes/class-pronamic-cookies-admin.php:54
+#: classes/class-pronamic-cookies-admin.php:127
+#: classes/class-pronamic-cookies-admin.php:166
 msgid "No"
 msgstr "Nee"
 
-#: classes/class-pronamic-cookies-admin.php:65
+#: classes/class-pronamic-cookies-admin.php:63
 msgid "Location"
 msgstr "Locatie"
 
-#: classes/class-pronamic-cookies-admin.php:73
+#: classes/class-pronamic-cookies-admin.php:71
 msgid "Top"
 msgstr "Boven"
 
-#: classes/class-pronamic-cookies-admin.php:77
+#: classes/class-pronamic-cookies-admin.php:75
 msgid "Bottom"
 msgstr "Onder"
 
-#: classes/class-pronamic-cookies-admin.php:86
-#: classes/class-pronamic-cookies-admin.php:147
+#: classes/class-pronamic-cookies-admin.php:84
+#: classes/class-pronamic-cookies-admin.php:145
 msgid "Text"
 msgstr "Tekst"
 
-#: classes/class-pronamic-cookies-admin.php:95
-#, fuzzy
+#: classes/class-pronamic-cookies-admin.php:93
 msgid "Link"
-msgstr "Koppelingen"
+msgstr "Link"
 
-#: classes/class-pronamic-cookies-admin.php:110
-#, fuzzy
-msgid "Pronamic Cookie Blocker Options"
-msgstr "Pronamic Cookie Law opties"
+#: classes/class-pronamic-cookies-admin.php:108
+msgid "Wall"
+msgstr "Muur"
 
-#: classes/class-pronamic-cookies-admin.php:138
+#: classes/class-pronamic-cookies-admin.php:136
 msgid "Title"
 msgstr "Titel"
 
-#: classes/class-pronamic-cookies-admin.php:156
+#: classes/class-pronamic-cookies-admin.php:154
 msgid "Show link?"
-msgstr ""
+msgstr "Link weergeven?"
 
-#: classes/class-pronamic-cookies-admin.php:177
+#: classes/class-pronamic-cookies-admin.php:175
 msgid "Background Image"
-msgstr ""
+msgstr "Achtergrond afbeelding"
 
-#: classes/class-pronamic-cookies-admin.php:186
+#: classes/class-pronamic-cookies-admin.php:184
 msgid "Background Color"
-msgstr ""
+msgstr "Achtergrond kleur"
 
-#: classes/class-pronamic-cookies-admin.php:264
+#: classes/class-pronamic-cookies-admin.php:260
 msgid "Upload"
-msgstr ""
+msgstr "Upload"
 
-#: classes/class-pronamic-cookies.php:68
-#, fuzzy
+#: classes/class-pronamic-cookies.php:66
 msgid "Accept"
-msgstr "Acceptant ID"
+msgstr "Accepteer"
 
-#: classes/class-pronamic-cookies.php:69
+#: classes/class-pronamic-cookies.php:67
 msgid "Read more about the cookies on this site here"
-msgstr ""
+msgstr "Lees meer over de cookies op de volgende website"
 
 #: views/message.php:8
 msgid "Close"
 msgstr "Sluit"
 
-#: views/admin/display_options_page.php:3
-msgid "Pronamic Cookie Law Options"
-msgstr "Pronamic Cookie Law opties"
+#, fuzzy
+#~ msgid "Pronamic Cookies Options"
+#~ msgstr "Pronamic Cookie Law opties"
+
+#, fuzzy
+#~ msgid "Pronamic Cookie Blocker Options"
+#~ msgstr "Pronamic Cookie Law opties"
+
+#~ msgid "Pronamic Cookie Law Options"
+#~ msgstr "Pronamic Cookie Law opties"
 
 #~ msgid "Feeds Messages"
 #~ msgstr "Feeds berichten"
