@@ -84,7 +84,13 @@ You can call the modal of pronamic_cookies_dynamic and pronamic_cookies_section 
 'jShowCookieLawModal'
 
 
+== Screenshots ==
 
+1. Example of Pronamic Cookies Wall
+2. Example of Pronamic Cookies Bar
+3. Pronamic Cookies Section/Dynamic Prior to accept
+4. Pronamic Cookies Section/Dynamic modal example
+5. Settings Page
 
 
 == Installation ==
