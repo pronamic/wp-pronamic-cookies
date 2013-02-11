@@ -85,17 +85,20 @@ function pronamic_cookies_modal( $name, $arguments = array() ) {
 }
 
 function pronamic_cookies_dynamic( $name, $container, $arguments = array() ) {
-    $title = __( 'Cookie Law Notice', 'pronamic-cookes' );
-    $description = get_option( 'pronamic_cookie_text' );
 
-    if ( is_array( $arguments ) && ! empty( $arguments ) )
-        extract( $arguments, EXTR_IF_EXISTS );
+	$defaults = array(
+		'title' => __( 'Cookie Law Notice', 'pronamic-cookies' ),
+		'description' => get_option( 'pronamic_cookie_text' ),
+		'content' => ''
+	);
 
-
+	$values = wp_parse_args( $arguments, $defaults );
+    extract( $values, EXTR_SKIP );
+	
     ?>
 
     <?php
-    $successful_content = apply_filters( "pcl_dynamic_$name", 'This is successful' ); ?>
+    $successful_content = apply_filters( "pronamic_cookies_dynamic_$name", $content ); ?>
     <script type="text/javascript">jQuery(Pronamic_Cookies.dynamic.ready);</script>
     <input type="hidden" class="jPCLDynamicContent" data-name="<?php echo $name; ?>" value="<?php echo $successful_content; ?>" data-container="<?php echo $container; ?>"/>
     <div class="pronamic_csection_modal">
