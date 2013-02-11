@@ -116,7 +116,10 @@ You can call the modal of pronamic_cookies_dynamic and pronamic_cookies_section 
 == Changelog ==
 
 = 0.2 =
-*	?
+*	Cookie Wall Feature: Enables full blocking of the site until cookie is accepted.
+*	Cookies Dynamic: Dynamic area for cookies
+*	Functions now follow a better naming structure. Old names (pcl_) are now deprecated
+*	Screenshots
 
 = 0.1 =
 *	Initial release
