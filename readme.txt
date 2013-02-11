@@ -65,6 +65,14 @@ pronamic_cookies_dynamic( $name, $container, $arguments );
 
 You don't require an if statement with dynamic ( or the usage of pronamic_cookies_is_section_accepted() ).
 
+==== Success Content: ====
+
+To show the success content for pronamic_cookies_dynamic, you require a function that is used in combination with add_filter
+
+add_filter( 'pronamic_cookies_dynamic_$name', 'function_name' );
+
+Where $name is the name used in the call to pronamic_cookies_dynamic();
+
 ==== Example: ====
 
 <div class='pronamic_cookies_dynamic_container'>
@@ -72,10 +80,17 @@ You don't require an if statement with dynamic ( or the usage of pronamic_cookie
 </div>
 <?php
 
-pronamic_cookies_dynamic( 'dynamic_section', 'pronamic_cookies_dynamic_container', array(
+pronamic_cookies_dynamic( 'facebook_section', 'pronamic_cookies_dynamic_container', array(
 	'title' => __( 'Cookies are required for this section' )
 ) );
 
+// In a functions file
+add_filter( 'pronamic_cookies_dynamic_facebook_section', 'facebook_section_success' );
+
+function facebook_section_success( $content ) {
+	$content = 'custom javascript or anything else';
+	return $content;
+}
 ?>
 
 ==== JavaScript ====
