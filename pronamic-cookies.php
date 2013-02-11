@@ -2,7 +2,7 @@
 /*
 Plugin Name: Pronamic Cookies
 Plugin URI: http://pronamic.eu/wp-plugins/cookies/
-Description: Plugin to follow e-Privacy law.
+Description: Handy solutions to the new Cookie Law.  Full site blocker or just a bar. Also have specific sections of a page blocked.
 
 Version: 0.2
 Requires at least: 3.2
