@@ -10,7 +10,7 @@ Stable tag: 0.2
 
 Allows your site to follow the new Cookie Law.  Gives a small overlay that will show text you can customize in the settings.
 
-You can also chose a location, and a link for the text.
+You can also choose a location, and a link for the text.
 
 == Bar ==
 
