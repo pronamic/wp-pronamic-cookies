@@ -2,7 +2,7 @@
 /*
 Plugin Name: Pronamic Cookies
 Plugin URI: http://pronamic.eu/wp-plugins/cookies/
-Description: Handy solutions to the new Cookie Law.  Full site blocker or just a bar. Also have specific sections of a page blocked.
+Description: Handy solutions to the new Cookie Law.  Full site blocker or just a bar. You can also block specific sections of a page.
 
 Version: 0.2
 Requires at least: 3.2
