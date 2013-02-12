@@ -14,14 +14,13 @@ You can also choose a location, and a link for the text.
 
 == Bar ==
 
-The Cookie Bar is a simple bar along the top or bottom of the page that gives notification that this site uses cookies.  Text and a link are modifiable
+The Cookie Bar is a simple bar along the top or bottom of the page that gives notification that this site uses cookies. Text and a link are modifiable.
 
 == Wall ==
 
-The Cookie Wall is a full site lockout until cookies have been accepted.  It is run before anything that can set any javascript or cookies.  A background image, color and text are modifiable
-from the settings.
+The Cookie Wall is a full site lockout until cookies have been accepted. It is run before anything that can set any javascript or cookies. A background image, color and text are modifiable from the settings.
 
-Note: The Cookie Bar and Cookie Wall share the same cookie as they aim to solve the same problem, just in different ways.  Choose one of the two
+Note: The Cookie Bar and Cookie Wall share the same cookie as they aim to solve the same problem, just in different ways. Choose one of the two.
 
 == Sections ==
 
@@ -46,7 +45,7 @@ A new dynamic component is available that will ensure that sections are correctl
 
 `<?php $name = 'pronamic_cookies_dynamic'; ?>`
 
-Name is the unique naming given to this dynamic section.  Its name is important for determining the content you want
+Name is the unique naming given to this dynamic section. Its name is important for determining the content you want
 to show once accepted.
 
 `<?php $container = 'pronamic_cookies_dynamic_container'; ?>`
