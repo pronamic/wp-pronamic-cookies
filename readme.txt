@@ -35,6 +35,45 @@ sharing buttons from Facebook, Twitter, Google+, etc.
 **Note:** This technique requires adjustments in the theme or plugins you use.
 
 
+== Installation ==
+
+1.	Upload 'wp-pronamic-cookies' to the '/wp-content/plugins/' directory,
+2.	Activate the plugin through the 'Plugins' menu in WordPress.
+
+
+== Frequently Asked Questions ==
+
+1.	Have a question? Make a thread in the support forum and we will get back to you.
+
+
+== Screenshots ==
+
+1.	Example of Pronamic Cookies Wall
+2.	Example of Pronamic Cookies Bar
+3.	Pronamic Cookies Section/Dynamic Prior to accept
+4.	Pronamic Cookies Section/Dynamic modal example
+5.	Settings Page
+
+
+== Changelog ==
+
+= 0.2.2 =
+*	Fixed fatal error on plugin activation
+*	Fixed filename of screenshot-1.png
+
+= 0.2.1 =
+*	Improved documentation
+
+= 0.2 =
+*	Cookie Wall Feature: Enables full blocking of the site until cookie is accepted.
+*	Cookies Dynamic: Dynamic area for cookies
+*	Functions now follow a better naming structure. Old names (pcl_) are now deprecated
+*	Screenshots
+
+= 0.1 =
+*	Initial release
+
+
 == Sections ==
 
 You can specify sections you want to require a cookie to be set with the 
@@ -122,41 +161,3 @@ You can call the modal of pronamic_cookies_dynamic and pronamic_cookies_section
 from anything (imgs, buttons, links) just give that element the class
 'jShowCookieLawModal'
 
-
-== Screenshots ==
-
-1.	Example of Pronamic Cookies Wall
-2.	Example of Pronamic Cookies Bar
-3.	Pronamic Cookies Section/Dynamic Prior to accept
-4.	Pronamic Cookies Section/Dynamic modal example
-5.	Settings Page
-
-
-== Frequently Asked Questions ==
-
-1.	Have a question? Make a thread in the support forum and we will get back to you.
-
-
-== Installation ==
-
-1.	Upload 'wp-pronamic-cookies' to the '/wp-content/plugins/' directory,
-2.	Activate the plugin through the 'Plugins' menu in WordPress.
-
-
-== Changelog ==
-
-= 0.2.2 =
-*	Fixed fatal error on plugin activation
-*	Fixed filename of screenshot-1.png
-
-= 0.2.1 =
-*	Improved documentation
-
-= 0.2 =
-*	Cookie Wall Feature: Enables full blocking of the site until cookie is accepted.
-*	Cookies Dynamic: Dynamic area for cookies
-*	Functions now follow a better naming structure. Old names (pcl_) are now deprecated
-*	Screenshots
-
-= 0.1 =
-*	Initial release
