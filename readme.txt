@@ -8,24 +8,33 @@ Stable tag: 0.2.2
 
 == Description ==
 
-Allows your site to follow the new Cookie Law. Gives a small overlay that will 
-show text you can customize in the settings.
+The Pronamic Cookies plugins allows you to activate an cookies solutions for
+your WordPres website. There are multiple way the inform the visitors of your
+website about the use cookies. The Pronamic Cookies plugin support the following
+techniques:
 
-You can also choose a location, and a link for the text.
+= Bar =
 
-== Bar ==
+The cookie bar technique is an simple bar along the top or bottom of the page 
+that gives notification that your website uses cookies. The location, link and 
+text are the bar can be easily adjusted. 
 
-The Cookie Bar is a simple bar along the top or bottom of the page that gives 
-notification that this site uses cookies. Text and a link are modifiable.
+Note: This technique won't block any cookies wich are used on your website.
 
-== Wall ==
+= Wall =
 
-The Cookie Wall is a full site lockout until cookies have been accepted. It is 
-run before anything that can set any JavaScript or cookies. A background image, 
-color and text are modifiable from the settings.
+The cookie wall technique is a full site lockout until cookies have been 
+accepted. It is run before anything that can set any JavaScript or cookies. 
+A background image, color and text are modifiable from the settings.
 
-Note: The Cookie Bar and Cookie Wall share the same cookie as they aim to solve 
-the same problem, just in different ways. Choose one of the two.
+= Section =
+
+The cookie section technique is useful for small components or functionalities 
+on your website wich require cookies. You could for example use this for the 
+sharing buttons from Facebook, Twitter, Google+, etc. 
+
+Note: This technique requires adjustments in the theme or plugins you use.
+
 
 == Sections ==
 
@@ -45,6 +54,7 @@ $arguments allow an array of the following keys:
 *	title (the title message in the modal)
 *	description (an overode description text, from the option set)
 *	button (the text on the button itself)
+
 
 == Dynamic ==
 
@@ -74,7 +84,8 @@ pronamic_cookies_dynamic( $name, $container, $arguments );
 
 You don't require an if statement with dynamic ( or the usage of pronamic_cookies_is_section_accepted() ).
 
-== Success Content: ==
+
+== Success Content ==
 
 To show the success content for pronamic_cookies_dynamic, you require a 
 function that is used in combination with add_filter
@@ -83,7 +94,8 @@ function that is used in combination with add_filter
 
 Where $name is the name used in the call to pronamic_cookies_dynamic();
 
-== Example: ==
+
+== Example ==
 
 `
 <div class="pronamic_cookies_dynamic_container">
@@ -104,28 +116,33 @@ function facebook_section_success( $content ) {
 }
 ?>`
 
+
 == JavaScript ==
 
 You can call the modal of pronamic_cookies_dynamic and pronamic_cookies_section 
 from anything (imgs, buttons, links) just give that element the class
 'jShowCookieLawModal'
 
+
 == Screenshots ==
 
-1. Example of Pronamic Cookies Wall
-2. Example of Pronamic Cookies Bar
-3. Pronamic Cookies Section/Dynamic Prior to accept
-4. Pronamic Cookies Section/Dynamic modal example
-5. Settings Page
+1.	Example of Pronamic Cookies Wall
+2.	Example of Pronamic Cookies Bar
+3.	Pronamic Cookies Section/Dynamic Prior to accept
+4.	Pronamic Cookies Section/Dynamic modal example
+5.	Settings Page
+
 
 == Frequently Asked Questions ==
 
 1.	Have a question? Make a thread in the support forum and we will get back to you.
 
+
 == Installation ==
 
 1.	Upload 'wp-pronamic-cookies' to the '/wp-content/plugins/' directory,
 2.	Activate the plugin through the 'Plugins' menu in WordPress.
+
 
 == Changelog ==
 
