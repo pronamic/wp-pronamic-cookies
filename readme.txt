@@ -8,18 +8,17 @@ Stable tag: 0.2.2
 
 == Description ==
 
-The Pronamic Cookies plugins allows you to activate a cookies solutions on
-your WordPres website. There are multiple ways the inform the visitors of your
-website about the use of cookies. The Pronamic Cookies plugin support the 
-following techniques:
+The Pronamic Cookies plugin allows you to activate a cookie solution on
+your WordPress website. There are multiple ways to inform the visitors of the use 
+of cookies. The Pronamic Cookies plugin supports the following techniques:
 
 = Bar =
 
 The cookie bar technique is a simple bar along the top or bottom of the page 
 that gives notification that your website uses cookies. The location, link and 
-text are the bar can be easily adjusted. 
+text of the bar can be easily adjusted. 
 
-**Note:** This technique won't block any cookies wich are used on your website.
+**Note:** This technique won't block any cookies which are used on your website.
 
 = Wall =
 
