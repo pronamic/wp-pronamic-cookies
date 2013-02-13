@@ -8,18 +8,18 @@ Stable tag: 0.2.2
 
 == Description ==
 
-The Pronamic Cookies plugins allows you to activate an cookies solutions for
-your WordPres website. There are multiple way the inform the visitors of your
-website about the use cookies. The Pronamic Cookies plugin support the following
-techniques:
+The Pronamic Cookies plugins allows you to activate a cookies solutions on
+your WordPres website. There are multiple ways the inform the visitors of your
+website about the use of cookies. The Pronamic Cookies plugin support the 
+following techniques:
 
 = Bar =
 
-The cookie bar technique is an simple bar along the top or bottom of the page 
+The cookie bar technique is a simple bar along the top or bottom of the page 
 that gives notification that your website uses cookies. The location, link and 
 text are the bar can be easily adjusted. 
 
-Note: This technique won't block any cookies wich are used on your website.
+**Note:** This technique won't block any cookies wich are used on your website.
 
 = Wall =
 
@@ -33,7 +33,7 @@ The cookie section technique is useful for small components or functionalities
 on your website wich require cookies. You could for example use this for the 
 sharing buttons from Facebook, Twitter, Google+, etc. 
 
-Note: This technique requires adjustments in the theme or plugins you use.
+**Note:** This technique requires adjustments in the theme or plugins you use.
 
 
 == Sections ==
