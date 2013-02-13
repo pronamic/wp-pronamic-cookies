@@ -5,6 +5,7 @@ Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-cookies&source=wp
 Requires at least: 3.2
 Tested up to: 3.5.1
 Stable tag: 0.2.2
+License: GPLv2 or later
 
 == Description ==
 
@@ -72,6 +73,12 @@ sharing buttons from Facebook, Twitter, Google+, etc.
 
 = 0.1 =
 *	Initial release
+
+
+== Upgrade Notice ==
+
+= 0.9.2.8 =
+Thanks for using the Pronamic Cookies plugin! As always, this update is very strongly recommended.
 
 
 == Sections ==
