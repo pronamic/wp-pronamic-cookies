@@ -77,7 +77,7 @@ sharing buttons from Facebook, Twitter, Google+, etc.
 
 == Upgrade Notice ==
 
-= 0.9.2.8 =
+= 0.2.2 =
 Thanks for using the Pronamic Cookies plugin! As always, this update is very strongly recommended.
 
 
