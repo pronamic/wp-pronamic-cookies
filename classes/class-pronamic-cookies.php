@@ -37,7 +37,11 @@ class Pronamic_Cookies {
 	}
 
 	public function show_message() {
-		$viewed = ( isset( $_COOKIE['pcl_viewed'] ) ? : false );
+		if ( isset( $_COOKIE['pcl_viewed'] ) ) {
+			$viewed = $_COOKIE['pcl_viewed'];
+		} else {
+			$viewed = false;
+		}
 
 		$bar_active = get_option( 'pronamic_cookie_base_active' );
 
