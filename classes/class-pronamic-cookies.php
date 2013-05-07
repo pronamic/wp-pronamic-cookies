@@ -23,7 +23,7 @@ class Pronamic_Cookies {
 	}
 
 	public function init() {
-		load_plugin_textdomain( 'pronamic-cookies', false, PRONAMIC_CL_PLUGIN_DIR . '/lang/' );
+		load_plugin_textdomain( 'pronamic-cookies', false, PRONAMIC_CL_PLUGIN_DIR . '/languages/' );
 	}
 
 	public function styles() {
