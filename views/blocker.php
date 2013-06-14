@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
 		<style type="text/css">
@@ -66,6 +65,16 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php echo $javascript_url; ?>"></script>
 		<script type="text/javascript">jQuery(Pronamic_Cookies.blocker.ready);</script>
+		<script type="text/javascript">
+			
+			<?php $expires_date = new DateTime( get_option( 'pronamic_cookie_options_advanced_expires', '1 year' ), new DateTimeZone( 'GMT' ) ); ?>
+			var Pronamic_Cookies_Vars = {
+				cookie: {
+					path:"<?php echo get_option( 'pronamic_cookie_options_advanced_path', '/' ); ?>",
+					expires: "<?php echo $expires_date->format( 'D, d M Y H:i:s e' ); ?>"
+				}
+			};
+		</script>
 	</head>
 
 	<body style="background-image:url('<?php echo $image; ?>');background-repeat:no-repeat;background-position:top center;background-color:<?php echo $color; ?>">

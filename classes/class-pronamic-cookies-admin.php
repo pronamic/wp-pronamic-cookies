@@ -29,6 +29,40 @@ class Pronamic_Cookies_Admin {
 	}
 
 	public function register_settings() {
+		
+		add_settings_section(
+			'pronamic_cookie_options_advanced',
+			__( 'Cookie Settings', 'pronamic-cookies' ),
+			array( $this, 'settings_section' ),
+			'pronamic_cookie_options_advanced_page'
+		);
+		
+		add_settings_field(
+			'pronamic_cookie_options_advanced_path',
+			__( 'Path', 'pronamic-cookies' ),
+			array( $this, 'text' ),
+			'pronamic_cookie_options_advanced_page',
+			'pronamic_cookie_options_advanced',
+			array(
+				'label_for' => 'pronamic_cookie_options_advanced_path'
+			)
+		);
+		
+		add_settings_field(
+			'pronamic_cookie_options_advanced_expires',
+			__( 'Expires', 'pronamic-cookies' ),
+			array( $this, 'text' ),
+			'pronamic_cookie_options_advanced_page',
+			'pronamic_cookie_options_advanced',
+			array(
+				'label_for' => 'pronamic_cookie_options_advanced_expires',
+				'description' => __( 'Use a string that would go in <a href="http://php.net/manual/en/function.strtotime.php">strtotime</a>', 'pronamic-cookies' ) 
+			)
+		);
+		
+		register_setting( 'pronamic_cookie_options_advanced', 'pronamic_cookie_options_advanced_path' );
+		register_setting( 'pronamic_cookie_options_advanced', 'pronamic_cookie_options_advanced_expires' );
+		
 		// Base Settings
 		add_settings_section(
 			'pronamic_cookie_options',
@@ -207,6 +241,13 @@ class Pronamic_Cookies_Admin {
 			esc_attr( get_option( $args['label_for'] ) ),
 			'regular-text code'
 		);
+		
+		if ( isset( $args['description'] ) ) {
+			printf( 
+				'<p>%s</p>' ,
+				$args['description']
+			);
+		}
 	}
 
 	public function select( $args ) {
