@@ -4,7 +4,7 @@ Tags: cookies, cookie, bar, wall, header, section, privacy, eprivacy, law, prona
 Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-cookies&source=wp-plugin-readme-txt
 Requires at least: 3.2
 Tested up to: 3.5.1
-Stable tag: 0.2.4
+Stable tag: 0.2.5
 License: GPLv2 or later
 
 == Description ==
@@ -57,6 +57,9 @@ sharing buttons from Facebook, Twitter, Google+, etc.
 
 
 == Changelog ==
+
+= 0.2.5 =
+*	Added advanced settings for cookies, including path and expires period
 
 = 0.2.4 =
 *	Added Polish translation files (thanks to Michał Kąkol)
