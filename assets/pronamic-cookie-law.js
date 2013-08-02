@@ -196,7 +196,7 @@ var Pronamic_Cookies = {
     cookie: {
         all:{},
         make: function( args ) {
-            document.cookie = escape( args.name ) + '=' + escape( args.value ) + "; path=/";
+            document.cookie = escape( args.name ) + '=' + escape( args.value ) + "; path=" + Pronamic_Cookies_Vars.cookie.path + ';expires=' + Pronamic_Cookies_Vars.cookie.expires;
         }
 
     }
