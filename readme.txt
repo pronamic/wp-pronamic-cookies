@@ -3,7 +3,7 @@ Contributors: pronamic, zogot, remcotolsma
 Tags: cookies, cookie, bar, wall, header, section, privacy, eprivacy, law, pronamic, share
 Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-cookies&source=wp-plugin-readme-txt
 Requires at least: 3.2
-Tested up to: 3.5.1
+Tested up to: 3.6
 Stable tag: 0.2.5
 License: GPLv2 or later
 
