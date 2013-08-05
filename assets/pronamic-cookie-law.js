@@ -189,7 +189,7 @@ var Pronamic_Cookies = {
                     name = jQuery(this).data('name');
 
                 if(Pronamic_Cookies.dynamic.check_it('pcl_section_' + name))
-                    Pronamic_Cookies.dynamic.fill_it(container)
+                    Pronamic_Cookies.dynamic.fill_it(container);
             });
         }
     },
