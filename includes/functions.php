@@ -87,14 +87,14 @@ function pronamic_cookies_modal( $name, $arguments = array() ) {
 function pronamic_cookies_dynamic( $name, $container, $arguments = array() ) {
 
 	$defaults = array(
-		'title' => __( 'Cookie Law Notice', 'pronamic-cookies' ),
+		'title'       => __( 'Cookie Law Notice', 'pronamic-cookies' ),
 		'description' => get_option( 'pronamic_cookie_text' ),
-		'content' => ''
+		'content'     => ''
 	);
 
 	$values = wp_parse_args( $arguments, $defaults );
     extract( $values, EXTR_SKIP );
-	
+
     ?>
 
     <?php
