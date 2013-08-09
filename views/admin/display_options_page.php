@@ -5,7 +5,7 @@
 	<?php $tab = filter_input( INPUT_GET, 'tab', FILTER_SANITIZE_STRING ); ?>
 	<h2 class="nav-tab-wrapper">
 		<a class="nav-tab <?php if ( ! $tab ): ?>nav-tab-active<?php endif; ?>" href="<?php echo admin_url( 'options-general.php?page=pronamic_cookie_options_page' ); ?>"><?php echo get_admin_page_title(); ?></a>
-		<a class="nav-tab <?php if ( 'advanced' === $tab ): ?>nav-tab-active<?php endif; ?>" href="<?php echo admin_url( 'options-general.php?page=pronamic_cookie_options_page&tab=advanced' ); ?>"><?php _e( 'Advanced', 'pronamic_cookies' ); ?></a>
+		<a class="nav-tab <?php if ( 'advanced' === $tab ): ?>nav-tab-active<?php endif; ?>" href="<?php echo admin_url( 'options-general.php?page=pronamic_cookie_options_page&tab=advanced' ); ?>"><?php _e( 'Advanced', 'pronamic-cookies' ); ?></a>
 	</h2>
 
 	<form action="options.php" method="post">
