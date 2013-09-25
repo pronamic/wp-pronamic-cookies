@@ -61,8 +61,8 @@
 				text-decoration:none;
 			}
 		</style>
-
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script type="text/javascript" src="<?php echo $javascript_url; ?>"></script>
 		<script type="text/javascript">jQuery(Pronamic_Cookies.blocker.ready);</script>
 		<script type="text/javascript">
