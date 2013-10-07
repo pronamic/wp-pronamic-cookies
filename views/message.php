@@ -6,6 +6,6 @@
 			<?php echo $message;?>
 		<?php endif;?>
 
-		<a class='pronamic_cookie_close_button'><?php echo __( 'Close', 'pronamic-cookies' ); ?></a>
+		<a class='pronamic_cookie_close_button'><?php _e( 'Close', 'pronamic-cookies' ); ?></a>
 	</p>
 </div>
