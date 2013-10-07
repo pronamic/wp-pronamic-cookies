@@ -4,7 +4,7 @@ Plugin Name: Pronamic Cookies
 Plugin URI: http://pronamic.eu/wordpress-plugins/pronamic-cookies/
 Description: Handy solutions to the new Cookie Law. Full site blocker or just a bar. You can also block specific sections of a page.
 
-Version: 0.2.6
+Version: 0.2.7
 Requires at least: 3.2
 
 Author: Pronamic
