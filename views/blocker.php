@@ -89,7 +89,7 @@
 				<a class="pronamic_accept_button jBlockerAccept" href="#" data-refresh="true"><?php echo $accept_button_text; ?></a>
 
 				<?php if ( $cookie_law_link_show == 1 ): ?>
-					<a href="<?php echo $cookie_law_link; ?>"><?php echo $law_link_text; ?></a>
+					<a href="<?php echo esc_attr( $cookie_law_link ); ?>"><?php echo $law_link_text; ?></a>
 				<?php endif;?>
 			</div>
 		</div>
