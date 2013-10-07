@@ -39,7 +39,7 @@ class Pronamic_Cookies {
 		
 		wp_localize_script( 'pronamic_cookie_js', 'Pronamic_Cookies_Vars', array(
 			'cookie' => array(
-				'path' => get_option( 'pronamic_cookie_options_advanced_path', '/' ),
+				'path'    => get_option( 'pronamic_cookie_options_advanced_path', '/' ),
 				'expires' => $expires_date->format( 'D, d M Y H:i:s e' )
 			)
 		) );
