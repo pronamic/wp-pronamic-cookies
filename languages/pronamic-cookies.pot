@@ -1,0 +1,153 @@
+# Copyright (C) 2013 Pronamic Cookies
+# This file is distributed under the same license as the Pronamic Cookies package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Pronamic Cookies 0.2.6\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/pronamic-cookies\n"
+"POT-Creation-Date: 2013-10-07 09:01:53+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#. #-#-#-#-#  pronamic-cookies.pot (Pronamic Cookies 0.2.6)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: classes/class-pronamic-cookies-admin.php:19
+#: classes/class-pronamic-cookies-admin.php:20
+msgid "Pronamic Cookies"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:35
+msgid "Cookie Settings"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:42
+msgid "Path"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:53
+msgid "Expires"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:59
+msgid ""
+"Use a string that would go in <a href=\"http://php.net/manual/en/function."
+"strtotime.php\">strtotime</a>"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:69
+msgid "Bar"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:76
+#: classes/class-pronamic-cookies-admin.php:149
+msgid "Active?"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:84
+#: classes/class-pronamic-cookies-admin.php:157
+#: classes/class-pronamic-cookies-admin.php:196
+msgid "Yes"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:88
+#: classes/class-pronamic-cookies-admin.php:161
+#: classes/class-pronamic-cookies-admin.php:200
+msgid "No"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:97
+msgid "Location"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:105
+msgid "Top"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:109
+msgid "Bottom"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:118
+#: classes/class-pronamic-cookies-admin.php:179
+msgid "Text"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:127
+msgid "Link"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:142
+msgid "Wall"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:170
+msgid "Title"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:188
+msgid "Show link?"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:209
+msgid "Background Image"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:218
+msgid "Background Color"
+msgstr ""
+
+#: classes/class-pronamic-cookies-admin.php:301
+msgid "Upload"
+msgstr ""
+
+#: classes/class-pronamic-cookies.php:75
+msgid "Accept"
+msgstr ""
+
+#: classes/class-pronamic-cookies.php:76
+msgid "Read more about the cookies on this site here"
+msgstr ""
+
+#: includes/functions.php:20 includes/functions.php:58
+#: includes/functions.php:90
+msgid "Cookie Law Notice"
+msgstr ""
+
+#: includes/functions.php:21 includes/functions.php:44
+#: includes/functions.php:80 includes/functions.php:119
+msgid "Accept cookie"
+msgstr ""
+
+#: includes/functions.php:45 includes/functions.php:81
+#: includes/functions.php:120
+msgid "Decline cookie"
+msgstr ""
+
+#: views/admin/display_options_page.php:8
+msgid "Advanced"
+msgstr ""
+
+#: views/message.php:9
+msgid "Close"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://pronamic.eu/wordpress-plugins/pronamic-cookies/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Handy solutions to the new Cookie Law. Full site blocker or just a bar. You "
+"can also block specific sections of a page."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Pronamic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://pronamic.eu/"
+msgstr ""
