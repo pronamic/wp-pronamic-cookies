@@ -67,10 +67,24 @@
 		<script type="text/javascript">jQuery(Pronamic_Cookies.blocker.ready);</script>
 		<script type="text/javascript">
 			
-			<?php $expires_date = new DateTime( get_option( 'pronamic_cookie_options_advanced_expires', '1 year' ), new DateTimeZone( 'GMT' ) ); ?>
+			<?php 
+			
+			$setting_expire = get_option( 'pronamic_cookie_options_advanced_expires', '1 year' );
+			
+			if ( empty( $setting_expire ) )
+				$setting_expire = '1 year';
+			
+			$setting_path = get_option( 'pronamic_cookie_options_advanced_path', '/' );
+			
+			if ( empty( $setting_path ) )
+				$setting_path = '/';
+			
+			$expires_date = new DateTime( $setting_expire, new DateTimeZone( 'GMT' ) ); 
+			
+			?>
 			var Pronamic_Cookies_Vars = {
 				cookie: {
-					path:"<?php echo get_option( 'pronamic_cookie_options_advanced_path', '/' ); ?>",
+					path:"<?php echo $setting_path; ?>",
 					expires: "<?php echo $expires_date->format( 'D, d M Y H:i:s e' ); ?>"
 				}
 			};
