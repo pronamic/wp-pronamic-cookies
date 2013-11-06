@@ -4,7 +4,7 @@ Tags: cookies, cookie, bar, wall, header, section, privacy, eprivacy, law, prona
 Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-cookies&source=wp-plugin-readme-txt
 Requires at least: 3.2
 Tested up to: 3.7.1
-Stable tag: 0.3.0
+Stable tag: 0.3.1
 License: GPLv2 or later
 
 == Description ==
@@ -57,6 +57,9 @@ sharing buttons from Facebook, Twitter, Google+, etc.
 
 
 == Changelog ==
+
+= 0.3.1 =
+*	Fix for incorrect values on blocker used as default.
 
 = 0.3.0 =
 *   Fix for incorrect values being used as default. This caused the popups to keep showing
