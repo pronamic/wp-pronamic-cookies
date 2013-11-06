@@ -61,6 +61,9 @@ sharing buttons from Facebook, Twitter, Google+, etc.
 = 0.3.0 =
 *   Fix for incorrect values being used as default. This caused the popups to keep showing
 
+= 0.2.7 =
+*	Improved support for https:// websites
+
 = 0.2.6 =
 *	Updated Dutch translations
 *	Test up to WordPress 3.6
