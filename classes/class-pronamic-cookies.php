@@ -35,11 +35,21 @@ class Pronamic_Cookies {
 		wp_register_script( 'pronamic_cookie_js', plugins_url( PRONAMIC_CL_PLUGIN_DIR . '/assets/pronamic-cookie-law.js' ), array( 'jquery' ) );
 		wp_enqueue_script( 'pronamic_cookie_js' );
 		
-		$expires_date = new DateTime( get_option( 'pronamic_cookie_options_advanced_expires', '1 year' ), new DateTimeZone( 'GMT' ) );
+		$setting_expire = get_option( 'pronamic_cookie_options_advanced_expires', '1 year' );
+		
+		if ( empty( $setting_expire ) )
+			$setting_expire = '1 year';
+		
+		$setting_path = get_option( 'pronamic_cookie_options_advanced_path', '/' );
+		
+		if ( empty( $setting_path ) )
+			$setting_path = '/';
+		
+		$expires_date = new DateTime( $setting_expire, new DateTimeZone( 'GMT' ) );
 		
 		wp_localize_script( 'pronamic_cookie_js', 'Pronamic_Cookies_Vars', array(
 			'cookie' => array(
-				'path' => get_option( 'pronamic_cookie_options_advanced_path', '/' ),
+				'path'    => $setting_path,
 				'expires' => $expires_date->format( 'D, d M Y H:i:s e' )
 			)
 		) );
