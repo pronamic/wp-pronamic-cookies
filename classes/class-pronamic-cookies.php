@@ -37,9 +37,14 @@ class Pronamic_Cookies {
 		
 		$expires_date = new DateTime( get_option( 'pronamic_cookie_options_advanced_expires', '1 year' ), new DateTimeZone( 'GMT' ) );
 		
+		$setting_path = get_option( 'pronamic_cookie_options_advanced_path', '/' );
+		
+		if ( empty( $setting_path ) )
+			$setting_path = '/';
+		
 		wp_localize_script( 'pronamic_cookie_js', 'Pronamic_Cookies_Vars', array(
 			'cookie' => array(
-				'path' => get_option( 'pronamic_cookie_options_advanced_path', '/' ),
+				'path'    => $setting_path,
 				'expires' => $expires_date->format( 'D, d M Y H:i:s e' )
 			)
 		) );
