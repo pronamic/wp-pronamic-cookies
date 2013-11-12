@@ -57,11 +57,12 @@ sharing buttons from Facebook, Twitter, Google+, etc.
 
 
 == Changelog ==
+
 = 0.3.1 =
 *	Fix for incorrect values on blocker used as default.
 
 = 0.3.0 =
-*   Fix for incorrect values being used as default. This caused the popups to keep showing
+*	Fix for incorrect values being used as default. This caused the popups to keep showing
 
 = 0.2.7 =
 *	Improved support for https:// websites
