@@ -4,10 +4,10 @@ class Pronamic_Cookies {
 	public $plugin_file;
 
 	public $spiders = array(
-		'Googlebot', 'Yammybot', 'Openbot',
-		'Yahoo', 'Slurp', 'manbot', 'ia_archiver',
-		'Lycos', 'Scooter', 'AltaVista', 'Teoma',
-		'Gigabot', 'Googlebot-Mobile'
+		'bot ', 'Yahoo', 'Slurp',
+		'ia_archiver', 'Lycos', 'Scooter',
+		'AltaVista', 'Teoma', 'Googlebot-Mobile',
+		'AddThis', 'Google (+https://developers.google.com/+/web/snippet/)'
 	);
 
 	public function __construct() {
@@ -91,6 +91,12 @@ class Pronamic_Cookies {
 	}
 
 	public function is_a_spider() {
-		return array_search( $_SERVER['HTTP_USER_AGENT'], $this->spiders ) !== false;
+		foreach ( $this->spiders as $spider ) {
+			if ( stripos( $_SERVER['HTTP_USER_AGENT'], $spider ) !== false ) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 }
