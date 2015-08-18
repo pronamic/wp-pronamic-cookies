@@ -72,7 +72,7 @@ class Pronamic_Cookies {
 	public function blocker() {
 		$blocker_active = get_option( 'pronamic_cookie_blocker_active' );
 
-		if ( $blocker_active == 1 && ! $this->is_a_spider() && ! isset( $_COOKIE['pcl_viewed'] ) ) {
+		if ( $blocker_active == 1 && ! $this->is_a_spider() && ! is_feed() && ! isset( $_COOKIE['pcl_viewed'] ) ) {
 			// intercept!
 			pronamic_cookie_view( 'views/blocker', array(
 				'javascript_url'       => plugins_url( 'assets/pronamic-cookie-law.js', PRONAMIC_CL_FILE ),
