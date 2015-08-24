@@ -3,11 +3,13 @@
 class Pronamic_Cookies {
 	public $plugin_file;
 
+	// @see https://developers.facebook.com/docs/sharing/best-practices for Facebook UAs
 	public $spiders = array(
-		'bot ', 'Yahoo', 'Slurp',
+		'bot', 'Yahoo', 'Slurp',
 		'ia_archiver', 'Lycos', 'Scooter',
 		'AltaVista', 'Teoma', 'Googlebot-Mobile',
-		'AddThis', 'Google (+https://developers.google.com/+/web/snippet/)'
+		'AddThis', 'Google (+https://developers.google.com/+/web/snippet/)',
+		'Facebook', 'FB_IAB/FB4A', 'FBAN/FBIOS',
 	);
 
 	public function __construct() {
