@@ -59,7 +59,7 @@ function pronamic_cookie_view( $name, $vars = array(), $return = false ) {
 		return $buffer;
 	}
 
-	ob_get_contents();
+	ob_end_flush();
 }
 
 /**
