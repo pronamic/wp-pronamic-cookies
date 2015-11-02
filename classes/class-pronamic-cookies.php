@@ -63,6 +63,10 @@ class Pronamic_Cookies {
 		$bar_active = get_option( 'pronamic_cookie_base_active' );
 
 		if (  ! $viewed && $bar_active == 1 ) {
+			if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+				define( 'DONOTCACHEPAGE', true );
+			}
+
 			pronamic_cookie_view( 'views/message', array(
 				'position' => get_option( 'pronamic_cookie_location' ),
 				'message'  => get_option( 'pronamic_cookie_text ' ),
@@ -75,6 +79,10 @@ class Pronamic_Cookies {
 		$blocker_active = get_option( 'pronamic_cookie_blocker_active' );
 
 		if ( $blocker_active == 1 && ! $this->is_a_spider() && ! is_feed() && ! isset( $_COOKIE['pcl_viewed'] ) ) {
+			if ( ! defined( 'DONOTCACHEPAGE' ) ) {
+				define( 'DONOTCACHEPAGE', true );
+			}
+
 			// intercept!
 			pronamic_cookie_view( 'views/blocker', array(
 				'javascript_url'       => plugins_url( 'assets/pronamic-cookie-law.js', PRONAMIC_CL_FILE ),
