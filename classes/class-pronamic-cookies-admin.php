@@ -131,10 +131,32 @@ class Pronamic_Cookies_Admin {
 			array( 'label_for' => 'pronamic_cookie_link' )
 		);
 
+		add_settings_field(
+			'pronamic_cookie_link_target',
+			__( 'Link target', 'pronamic-cookies' ),
+			array( $this, 'select' ),
+			'pronamic_cookie_options_page',
+			'pronamic_cookie_options',
+			array(
+				'label_for' => 'pronamic_cookie_link_target',
+				'options' => array(
+					array(
+						'label_for' => __( 'Current window/tab', 'pronamic-cookies' ),
+						'value'     => '_self'
+					),
+					array(
+						'label_for' => __( 'New window/tab', 'pronamic-cookies' ),
+						'value'     => '_blank'
+					),
+				),
+			)
+		);
+
 		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_base_active' );
 		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_location' );
 		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_text' );
 		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_link', array( $this, 'verifiy_url' ) );
+		register_setting( 'pronamic_cookie_options', 'pronamic_cookie_link_target' );
 
 		// Blocker Settings
 		add_settings_section(

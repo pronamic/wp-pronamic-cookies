@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Pronamic Events\n"
+"Project-Id-Version: Pronamic Cookies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-05 14:26+0100\n"
-"PO-Revision-Date: 2013-08-05 14:53+0100\n"
+"POT-Creation-Date: 2016-05-27 16:17+0100\n"
+"PO-Revision-Date: 2016-05-27 16:17+0100\n"
 "Last-Translator: Remco Tolsma <info@remcotolsma.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "Language: nl_NL\n"
@@ -15,7 +15,8 @@ msgstr ""
 "esc_attr__;_nx:4c,1,2;_nx_noop:4c,1,2;esc_html_x:2c,1;esc_html__;_ex:2c,1\n"
 "X-Poedit-Basepath: ../\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: classes/class-pronamic-cookies-admin.php:19
@@ -48,19 +49,19 @@ msgid "Bar"
 msgstr "Balk"
 
 #: classes/class-pronamic-cookies-admin.php:76
-#: classes/class-pronamic-cookies-admin.php:149
+#: classes/class-pronamic-cookies-admin.php:171
 msgid "Active?"
 msgstr "Actief?"
 
 #: classes/class-pronamic-cookies-admin.php:84
-#: classes/class-pronamic-cookies-admin.php:157
-#: classes/class-pronamic-cookies-admin.php:196
+#: classes/class-pronamic-cookies-admin.php:179
+#: classes/class-pronamic-cookies-admin.php:218
 msgid "Yes"
 msgstr "Ja"
 
 #: classes/class-pronamic-cookies-admin.php:88
-#: classes/class-pronamic-cookies-admin.php:161
-#: classes/class-pronamic-cookies-admin.php:200
+#: classes/class-pronamic-cookies-admin.php:183
+#: classes/class-pronamic-cookies-admin.php:222
 msgid "No"
 msgstr "Nee"
 
@@ -77,7 +78,7 @@ msgid "Bottom"
 msgstr "Onder"
 
 #: classes/class-pronamic-cookies-admin.php:118
-#: classes/class-pronamic-cookies-admin.php:179
+#: classes/class-pronamic-cookies-admin.php:201
 msgid "Text"
 msgstr "Tekst"
 
@@ -85,35 +86,47 @@ msgstr "Tekst"
 msgid "Link"
 msgstr "Link"
 
-#: classes/class-pronamic-cookies-admin.php:142
+#: classes/class-pronamic-cookies-admin.php:136
+msgid "Link target"
+msgstr "Link doel"
+
+#: classes/class-pronamic-cookies-admin.php:144
+msgid "Current window/tab"
+msgstr "Huidig venster/tabblad"
+
+#: classes/class-pronamic-cookies-admin.php:148
+msgid "New window/tab"
+msgstr "Nieuw venster/tabblad"
+
+#: classes/class-pronamic-cookies-admin.php:164
 msgid "Wall"
 msgstr "Muur"
 
-#: classes/class-pronamic-cookies-admin.php:170
+#: classes/class-pronamic-cookies-admin.php:192
 msgid "Title"
 msgstr "Titel"
 
-#: classes/class-pronamic-cookies-admin.php:188
+#: classes/class-pronamic-cookies-admin.php:210
 msgid "Show link?"
 msgstr "Link weergeven?"
 
-#: classes/class-pronamic-cookies-admin.php:209
+#: classes/class-pronamic-cookies-admin.php:231
 msgid "Background Image"
 msgstr "Achtergrond afbeelding"
 
-#: classes/class-pronamic-cookies-admin.php:218
+#: classes/class-pronamic-cookies-admin.php:240
 msgid "Background Color"
 msgstr "Achtergrond kleur"
 
-#: classes/class-pronamic-cookies-admin.php:301
+#: classes/class-pronamic-cookies-admin.php:323
 msgid "Upload"
 msgstr "Upload"
 
-#: classes/class-pronamic-cookies.php:75
+#: classes/class-pronamic-cookies.php:96
 msgid "Accept"
 msgstr "Accepteer"
 
-#: classes/class-pronamic-cookies.php:76
+#: classes/class-pronamic-cookies.php:97
 msgid "Read more about the cookies on this site here"
 msgstr "Lees meer over de cookies op de volgende website"
 
@@ -132,13 +145,13 @@ msgstr "Cookies accepteren"
 msgid "Decline cookie"
 msgstr "Niet accepteren"
 
-#: views/message.php:9
-msgid "Close"
-msgstr "Sluit"
-
 #: views/admin/display_options_page.php:8
 msgid "Advanced"
 msgstr "Geavanceerd"
+
+#: views/message.php:9
+msgid "Close"
+msgstr "Sluit"
 
 #, fuzzy
 #~ msgid "Pronamic Cookies Options"
@@ -788,12 +801,12 @@ msgstr "Geavanceerd"
 #~ "32 tekens zal automatisch worden afgekapt."
 
 #~ msgid ""
-#~ "Merge Tag Examples: Entry Id = <code>{entry_id}</code>, Form Id = <code>"
-#~ "{form_id}</code>, Form Title = <code>{form_title}</code>"
+#~ "Merge Tag Examples: Entry Id = <code>{entry_id}</code>, Form Id = "
+#~ "<code>{form_id}</code>, Form Title = <code>{form_title}</code>"
 #~ msgstr ""
 #~ "Samenvoegen tag voorbeelden: Inzending ID = <code>{entry_id}</code>, "
-#~ "Formulier ID = <code>{form_id}</code>, Formulier titel = <code>"
-#~ "{form_title}</code>"
+#~ "Formulier ID = <code>{form_id}</code>, Formulier titel = "
+#~ "<code>{form_title}</code>"
 
 #~ msgid "Send admin notification only when payment is received."
 #~ msgstr ""

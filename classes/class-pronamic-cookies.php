@@ -68,9 +68,10 @@ class Pronamic_Cookies {
 			}
 
 			pronamic_cookie_view( 'views/message', array(
-				'position' => get_option( 'pronamic_cookie_location' ),
-				'message'  => get_option( 'pronamic_cookie_text ' ),
-				'link'     => get_option( 'pronamic_cookie_link' )
+				'position'    => get_option( 'pronamic_cookie_location' ),
+				'message'     => get_option( 'pronamic_cookie_text ' ),
+				'link'        => get_option( 'pronamic_cookie_link' ),
+				'link_target' => get_option( 'pronamic_cookie_link_target' ),
 			) );
 		}
 	}
