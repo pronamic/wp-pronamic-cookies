@@ -1,6 +1,6 @@
-=== Pronamic Cookies ===
+=== [DEPRECATED] Pronamic Cookies ===
 Contributors: pronamic, zogot, remcotolsma
-Tags: cookies, cookie, bar, wall, header, section, privacy, eprivacy, law, pronamic, share
+Tags: deprecated, cookies, cookie, bar, wall, header, section, privacy, eprivacy, law, pronamic, share
 Donate link: http://pronamic.eu/donate/?for=wp-plugin-pronamic-cookies&source=wp-plugin-readme-txt
 Requires at least: 3.2
 Tested up to: 3.7.1
